@@ -1,0 +1,548 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Book Your Stay - Gracimor Hyndland Estate</title>
+    <meta name="description" content="Book your luxurious stay at Gracimor Hyndland Estate in Lusaka, Zambia. View daily, weekly, and monthly rates.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="css/dripicons.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/meanmenu.css">
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <style>
+        /* =========================================
+           1. CORE LAYOUT & RESPONSIVENESS (IMPROVED)
+           ========================================= */
+        
+        /* General Spacing for the Main Content Section */
+        #booking-content {
+            padding-top: 100px; /* Increased top padding */
+            padding-bottom: 100px; /* Increased bottom padding */
+        }
+
+        /* Container for Rates & Contact (Left Column) */
+        .rates-and-contact {
+            padding: 40px; /* Increased inner padding for spaciousness */
+            background: #202124; 
+            border-radius: 12px; /* Slightly rounded corners */
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Softer, more visible shadow */
+            height: 100%; 
+            margin-bottom: 30px; /* Ensures space on mobile/stacked view */
+        }
+        
+        /* Container for Property Highlights (Right Column) */
+        .highlights-content {
+            padding: 40px; /* Increased inner padding for spaciousness */
+            background: #2b2c30;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+            height: 100%;
+            /* Moved feature line to media query for cleaner mobile look */
+        }
+        
+        /* Heading Styles with more bottom margin */
+        .content-heading {
+            color: #78b71e;
+            font-weight: 700;
+            margin-bottom: 30px; /* Increased margin */
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(120, 183, 30, 0.3);
+            font-size: 24px;
+        }
+
+        /* --- 2. Rates Table Styling (Spaciousness & Readability) --- */
+        
+        .rates-table {
+            width: 100%;
+            margin-bottom: 40px; /* More space below tables */
+            border-collapse: separate; 
+            border-spacing: 0 15px; /* Increased space between rows */
+        }
+        .rates-table th, .rates-table td {
+            padding: 15px 20px; /* Increased cell padding */
+            text-align: left;
+            border: none;
+            color: #fff;
+            border-radius: 8px; /* Slightly rounded cells */
+            overflow: hidden; /* Prevents overlap if text is too long */
+            word-break: break-word; /* Breaks long words if necessary */
+        }
+        .rates-table thead th {
+            background-color: #78b71e;
+            color: #2b2c30;
+        }
+        .rates-table tbody tr {
+            background-color: #383a3f; 
+        }
+
+        .rates-table .note-text {
+            font-size: 15px;
+            color: #ccc;
+            margin-top: -10px;
+            margin-bottom: 30px;
+            display: block;
+            padding: 0 5px; /* Small padding adjustment */
+        }
+        
+        /* --- 3. Contact and Highlights (Content Clarity) --- */
+        
+        .contact-info .icon-item {
+            margin-bottom: 20px; /* Increased space between contact lines */
+            position: relative;
+            display: block;
+        }
+        .contact-info .icon-item span {
+            font-size: 17px;
+        }
+
+        .highlights-content p {
+            line-height: 1.9; /* Improved line spacing */
+            margin-bottom: 25px;
+            color: #d1d1d1;
+            font-size: 16px;
+        }
+        .highlights-content ul li {
+            margin-bottom: 15px; /* Increased space between list items */
+            padding-left: 30px;
+            font-size: 17px;
+        }
+
+        /* --- 4. Desktop Specific Column Behavior (No Collapse/Overlap) --- */
+        @media (min-width: 992px) {
+            .booking-layout-row {
+                /* Ensures gutters are properly used and prevents collision */
+                margin-left: -15px;
+                margin-right: -15px;
+            }
+            .booking-layout-row .col-lg-4,
+            .booking-layout-row .col-lg-8 {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+
+            .booking-layout-row .col-lg-4 {
+                /* Left Column: Rates and Contact (4/12 width) */
+                flex: 0 0 33.333333%;
+                max-width: 33.333333%;
+            }
+            .booking-layout-row .col-lg-8 {
+                /* Right Column: Highlights (8/12 width) */
+                flex: 0 0 66.666667%;
+                max-width: 66.666667%;
+            }
+            
+            /* Feature Line on Desktop */
+            .highlights-content {
+                border-left: 3px solid #78b71e; /* Feature line for desktop */
+            }
+            .rates-and-contact {
+                margin-bottom: 0; /* No bottom margin when side-by-side */
+            }
+        }
+
+        /* --- 5. Mobile Specific Adjustments (Stacking) --- */
+        @media (max-width: 991px) {
+            .rates-and-contact, .highlights-content {
+                margin-bottom: 40px; /* Generous space between stacked sections */
+                padding: 30px 20px; /* Reduced padding slightly for smaller screens */
+            }
+            .highlights-content {
+                 border-top: 3px solid #78b71e; /* Feature line separates stacked content */
+            }
+            .rates-table th, .rates-table td {
+                padding: 12px 15px; /* Adjust padding for mobile tables */
+                font-size: 14px;
+            }
+            .rates-table caption {
+                font-size: 1.1em;
+            }
+        }
+
+        /* --- 6. Existing Footer Icon Styling (Retained for context) --- */
+        .f-contact ul li i.icon {
+            background: #78b71e; 
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            height: 40px; 
+            width: 40px; 
+            border-radius: 50%; 
+            color: #2b2c30; 
+            margin-right: 15px;
+            font-size: 18px;
+        }
+
+ 
+        
+        .f-contact ul li i.icon {
+            /* Set the background color to #78b71e */
+            background: #78b71e; 
+            
+            /* Ensure the background is visible and the icon is centered */
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            
+            /* Define size and shape */
+            height: 40px; 
+            width: 40px; 
+            border-radius: 50%; /* Makes it a circle */
+            
+            /* Adjust icon color and spacing */
+            color: #2b2c30; /* Use a dark color for the icon itself to stand out on the green background */
+            margin-right: 15px;
+            font-size: 18px;
+        }
+
+        /* Adjust the spacing for the text next to the icon (if necessary) */
+        .f-contact ul li span {
+            display: inline-block;
+            vertical-align: top;
+        }
+    </style>
+</head>
+<body class="dark">
+    <div class="content-lines-wrapper">
+        <div class="content-lines-inner">
+            <div class="content-lines"></div>
+        </div>
+    </div>
+    <header class="header-area header-three"> 
+        <div id="header-sticky" class="menu-area">
+            <div class="container-fluid second-menu">
+                <div class="row align-items-center">
+                    <div class="col-lg-1 col-md-12 d-none d-lg-block">
+                        <a href="#" class="menu-tigger"><img src="img/bg/toggle-menu.png" alt="logo"></a>
+                    </div>
+                    <div class="col-lg-1 col-md-12">
+                        <div class="logo">
+                            <a href="index.html"><img src="img/logo/logo.png" alt="logo"></a>
+                        </div>
+                    </div>
+                    <div class="col-xl-8 col-lg-8 col-md-7 text-center">
+                        <div class="main-menu">
+                            <nav id="mobile-menu">
+                                <ul>
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="gallery.html">Gallery</a></li>
+                                    <li class="has-sub">
+                                        <a href="#">web-apps</a>
+                                        <ul>
+                                            <li><a href="https://fashionsakala.netlify.app/">Fashion-Sakala-JR-Portfolio</a></li>
+                                            <li><a href="https://taurai.com/fashion/">Fashion-Sakala-Foundation</a></li>
+                                            <li><a href="https://www.gracimorloans.com/">Gracimor-loan</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#contact-section">Contact</a></li>
+                                    <li>
+                                        <button id="mode-toggle" class="btn" style="background: #78b71e; color: #000; padding: 10px 15px; border-radius: 50%;"><i class="fas fa-sun"></i></button>
+                                    </li>
+                                    <li><a href="https://taurai.com/gracimor/">sign_in</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div> 
+                    <div class="col-xl-2 col-lg-2 col-md-3 text-center d-none d-lg-block">
+                        <div class="right-menu">
+                            <ul>
+                                <li>
+                                    <div class="text">
+                                        <span>Request tour</span>
+                                        <strong>0973580350</strong>
+                                    </div> 
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="mobile-menu"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="offcanvas-menu">
+        <span class="menu-close"><i class="fas fa-times"></i></span>
+        <form role="search" method="get" id="searchform" class="searchform" action="#">
+            <input type="text" name="s" id="search" value="" placeholder="Search">
+            <button><i class="fa fa-search"></i></button>
+        </form>
+        <div id="cssmenu3" class="menu-one-page-menu-container">
+            <ul class="menu">
+                <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="index.html">Home</a></li>
+                <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="gallery.html">Gallery</a></li>
+                <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="#contact-section">Contact</a></li>
+            </ul>
+        </div>
+        <div id="cssmenu2" class="menu-one-page-menu-container">
+            <ul id="menu-one-page-menu-12" class="menu">
+                <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="tel:+260973580350"><span>+260 973580350</span></a></li>
+                <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="mailto:admin@gracimorproperties.com"><span>admin@gracimorproperties.com</span></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="offcanvas-overly"></div>
+
+    <main>
+        <section class="breadcrumb-area d-flex align-items-center" style="background-image:url(img/testimonial/test-bg.png)">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-xl-12 col-lg-12">
+                        <div class="breadcrumb-wrap text-center">
+                            <div class="breadcrumb-title">
+                                <h2 class="wow fadeInDown" data-wow-delay=".2s">Book Your Stay At Gracimor Hyndland Estate</h2> 
+                                <div class="breadcrumb-wrap">
+                                    <nav aria-label="breadcrumb">
+                                        <ol class="breadcrumb">
+                                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                            <li class="breadcrumb-item active" aria-current="page">Booking</li>
+                                        </ol>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="booking-content" class="pt-120 pb-90" style="background: #2b2c30;">
+            <div class="container">
+                <div class="row booking-layout-row">
+                    
+                    <div class="col-lg-4 col-md-12">
+                        <div class="rates-and-contact wow fadeInLeft" data-wow-delay=".4s">
+                            
+                            <h3 class="content-heading">Booking Rates</h3>
+                            <span class="note-text">Important Note: All apartments cater for a maximum of 4 Adults. No restrictions to kids under the age of 13 years. Monthly rates (from +28 days).</span>
+
+                            <table class="rates-table">
+                                <thead>
+                                    <tr>
+                                        <th>Occupants</th>
+                                        <th>Daily Rate</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1 Adult</td>
+                                        <td>$100</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2 Adults</td>
+                                        <td>$120</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3 Adults</td>
+                                        <td>$135</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4 Adults</td>
+                                        <td>$155</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <table class="rates-table">
+                                <caption>
+                                    Weekly Rates - "Experience top notch lifestyle"
+                                </caption>
+                                <thead>
+                                    <tr>
+                                        <th colspan="2">7 days and more: 10% Discount on Daily Rate</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                            
+                            <table class="rates-table">
+                                <caption>
+                                    Monthly Rates - "The future of modern living"
+                                </caption>
+                                <thead>
+                                    <tr>
+                                        <th>Occupants</th>
+                                        <th>Discounted Rate</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1 Adult (39% Disc.)</td>
+                                        <td>$1,708.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2 Adults (42% Disc.)</td>
+                                        <td>$1,948.80</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3 Adults (43% Disc.)</td>
+                                        <td>$2,154.60</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4 Adults (45% Disc.)</td>
+                                        <td>$2,387.00</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            
+                            <div style="display: block; z-index: 9999; position: relative;" id="contact-section">
+                                <h3 class="content-heading mt-5">For Any Enquiry, Talk To One of Our Agents!</h3>
+                                <div class="contact-info">
+                                    <p>Feel free to visit during normal business hours. Book an appointment for viewing.</p>
+                                    
+                                    <div class="icon-item">
+                                        <i class="fas fa-phone"></i>
+                                        <span><a href="tel:+260973580350" style="color: inherit;">+260 973580350</a></span>
+                                    </div>
+                                    <div class="icon-item">
+                                        <i class="fas fa-envelope"></i>
+                                        <span><a href="mailto:admin@gracimorproperties.com" style="color: inherit;">admin@gracimorproperties.com</a></span>
+                                    </div>
+                                    <div class="icon-item">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span>Sub 4 of Sub B3 Farm 382A Meanwood Ibex Lusaka, Zambia</span>
+                                    </div>
+                                    <div class="icon-item">
+                                        <i class="fas fa-clock"></i>
+                                        <span>Monday – Sunday, 08h00 - 17h00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-8 col-md-12">
+                        <div class="highlights-content wow fadeInRight" data-wow-delay=".6s">
+                            <h3 class="content-heading">Property Highlights</h3>
+                            <p>Situated in Lusaka, the recently renovated Gracimor Hyndland Estate features accommodation 18 km from Lusaka National Museum and 32 km from Lusaka South Country Club. The air-conditioned accommodation is 15 km from Lusaka Golf Club, and guests can benefit from private parking available on site and free WiFi. The property is non-smoking and is set 35 km from Chilanga Golf Club.</p>
+                            
+                            <p>The spacious apartment features 3 bedrooms, 4 bathrooms, bed linen, towels, a flat-screen TV with streaming services, a dining area, a fully equipped kitchen, and a patio with garden views. The unit at the property features a hot tub and a dressing room. For added privacy, the accommodation features a private entrance. Guests can relax in the garden at the property.</p>
+                            
+                            <h4 style="color: #fff; margin-top: 30px; margin-bottom: 20px;">Key Amenities & Proximity:</h4>
+                            <ul>
+                                <li>3 Bedrooms, 4 Bathrooms - Ample space for up to 4 adults.</li>
+                                <li>Private Parking & Free WiFi - Essential services included.</li>
+                                <li>Hot Tub & Dressing Room - Luxury and comfort features.</li>
+                                <li>Air-Conditioned - Perfect for the Lusaka climate.</li>
+                                <li>12 km to Kenneth Kaunda International Airport (KKIA).</li>
+                                <li>Close proximity to Lusaka Golf Club (15 km) and Lusaka National Museum (18 km).</li>
+                                <li>Located near Munda Wanga Botanical Garden (36 km).</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+    <footer class="footer-bg footer-p">
+        <div class="footer-top pt-90 pb-40">
+            <div class="container">
+                <div class="row justify-content-between">
+                    <div class="col-xl-4 col-lg-4 col-sm-6">
+                        <div class="footer-widget mb-30">
+                            <div class="f-widget-title">
+                                <img src="img/logo/logo.png" alt="img">
+                            </div>
+                            <div class="footer-text mb-20">
+                                <p>A new way to find a home you'll love. We have the most listings and constant updates.</p>
+                            </div>
+                            <div class="footer-social">
+                                <a href="https://www.facebook.com/FASHIONJRNEWS"><i class="fab fa-facebook-f"></i></a>
+            
+                                <a href="https://www.instagram.com/gracimorproperties/"><i class="fab fa-instagram"></i></a>
+                                <a href="https://api.whatsapp.com/send?phone=+260973580350"><i class="fab fa-whatsapp"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-2 col-sm-6">
+                        <div class="footer-widget mb-30">
+                            <div class="f-widget-title">
+                                <h2>Our Links</h2>
+                            </div>
+                            <div class="footer-link">
+                                <ul>
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="#about"> About Us</a></li>
+                                    <li><a href="gallery.html"> Gallery </a></li>
+                                    <li><a href="#contact"> Contact Us</a></li>
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-sm-6">
+                        <div class="footer-widget mb-30">
+                            <div class="f-widget-title">
+                                <h2>Contact Us</h2>
+                            </div>
+                            <div class="f-contact">
+                                <ul>
+                                    <li>
+                                        <i class="icon fal fa-phone"></i>
+                                        <span><a href="tel:+260960565108">+260960565108</a></span>
+                                    </li>
+                                    <li><i class="icon fal fa-envelope"></i>
+                                        <span>
+                                            <a href="mailto:info@gracimorproperties.com">info@gracimorproperties.com</a>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <i class="icon fal fa-map-marker-check"></i>
+                                        <span>Gracimor hyndlands <br>Meanwood Ibex Lusaka.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-wrap">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-12">
+                        <div class="copy-text text-center">
+                            All Rights Reserved. Gracimor properties 2025
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="js/vendor/jquery-3.6.0.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/ajax-form.js"></script>
+    <script src="js/paroller.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/js_isotope.pkgd.min.js"></script>
+    <script src="js/imagesloaded.min.js"></script>
+    <script src="js/parallax.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <script src="js/jquery.meanmenu.min.js"></script>
+    <script src="js/parallax-scroll.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/element-in-view.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/mode-toggle.js"></script>
+    
+    <script>
+        // Initialize WOW for scroll-based animations
+        new WOW().init();
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(php artisan:*)",
+      "Bash(composer show:*)",
+      "Bash(npm run dev:*)",
+      "Bash(php -r:*)",
+      "Bash(net start:*)",
+      "Bash(sc query:*)",
+      "Bash(findstr:*)",
+      "Bash(wmic:*)",
+      "Bash(sqlite3:*)",
+      "Bash(php verify-user.php:*)",
+      "WebFetch(domain:lenco-api.readme.io)",
+      "Bash(ngrok version:*)",
+      "Bash(choco install:*)",
+      "Bash(Select-String -Pattern \"Lenco Payment\" -Context 0,15)",
+      "Bash(php:*)",
+      "Bash(powershell -ExecutionPolicy Bypass -Command:*)",
+      "Bash(ls -la \"C:\\\\Users\\\\HP\\\\Documents\\\\dev\\\\rental\\\\apartment-rental-full\\\\resources\\\\views\\\\layouts\"\" 2>nul || echo \"Checking for layout files \")",
+      "Bash(npm run build:*)"
+    ]
+  }
+}

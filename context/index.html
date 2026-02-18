@@ -1,0 +1,1752 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+    
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Gracimor Hyndland Estate - Premium Living in Lusaka</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- Place favicon.ico in the root directory -->
+
+		<!-- CSS here -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/animate.min.css">
+        <link rel="stylesheet" href="css/magnific-popup.css">
+        <link rel="stylesheet" href="fontawesome/css/all.min.css">
+        <link rel="stylesheet" href="css/dripicons.css">
+        <link rel="stylesheet" href="css/slick.css">
+        <link rel="stylesheet" href="css/meanmenu.css">
+        <link rel="stylesheet" href="css/default.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/responsive.css">
+        <style>
+        .slider-area {
+            position: relative;
+        }
+        .slider-area .background-clip {
+            position: absolute;
+            top: 0;
+            left: 79px; /* Width of the left bar (dots) */
+            right: 79px; /* Width of the right bar (slider-info) */
+            width: calc(100% - 158px);
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+        }
+        .single-slider {
+            background: transparent !important;
+        }
+        .slider-active {
+            background: transparent !important;
+        }
+        .slider-info {
+            z-index: 2;
+        }
+        .slider-active .slick-dots {
+            z-index: 2;
+        }
+        .overlay-bg {
+            z-index: 1;
+        }
+        .slider-content {
+            z-index: 2;
+        }
+
+        @media (max-width: 767px) {
+            .slider-area .background-clip {
+                left: 0;
+                right: 0;
+                width: 100%;
+            }
+        }
+
+        /* Light Mode Styles */
+        .light-mode {
+            background: #fff !important;
+            color: #333 !important;
+        }
+        .light-mode .dark {
+            background: #fff !important;
+            color: #333 !important;
+        }
+        .light-mode .slider-content h2, .light-mode .section-title h2, .light-mode .skills-title h2, .light-mode .skills-title h6, .light-mode .section-title h6, .light-mode .testimonial-area h2, .light-mode .about-user .text h5, .light-mode h1, .light-mode h2, .light-mode h3, .light-mode h4, .light-mode h5, .light-mode h6, .light-mode .scrollbox__item, .light-mode .skill-name, .light-mode .count, .light-mode .counter span, .light-mode .s-slider-content h6, .light-mode .slider-content .expert strong, .light-mode .btn.ss-btn.active {
+            color: #000 !important;
+        }
+        .light-mode #services, .light-mode #team, .light-mode #blog, .light-mode .footer-bg, .light-mode .copyright-wrap {
+            background: #f8f9fa !important;
+        }
+        .light-mode .second-menu, .light-mode .header-three .sticky-menu {
+            background: #fff !important;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1) !important;
+        }
+        .light-mode .main-menu ul li a {
+            color: #333 !important;
+        }
+        .light-mode .main-menu ul li a:hover {
+            color: #78b71e !important;
+        }
+        .light-mode .right-menu li {
+            background: #f8f9fa !important;
+        }
+        .light-mode .right-menu .text strong {
+            color: #000 !important;
+        }
+        .light-mode .slider-info {
+            background: #f8f9fa !important; 
+        }
+        .light-mode .slider-info .email, .light-mode .slider-info .social a {
+            color: #333 !important;
+        }
+        .light-mode .slider-active .slick-dots {
+            background: #f8f9fa !important;
+        }
+        .light-mode .slider-active .slick-dots li button::before {
+            background: #ddd !important;
+        }
+        .light-mode .slider-active .slick-dots li.slick-active button {
+            background: #78b71e !important;
+        }
+        .light-mode .footer-widget .f-widget-title h2 {
+            color: #000 !important;
+        }
+        .light-mode .footer-link ul li a {
+            color: #333 !important;
+        }
+        .light-mode .copy-text {
+            color: #333 !important;
+        }
+        .light-mode .content-lines-inner, .light-mode .content-lines {
+            border-color: #eee !important;
+        }
+        .light-mode .right-menu .text span {
+            color: #6c757d;
+        }
+
+        .ceo {
+    /* Styles for mobile (default - "as is") */
+    /* Assuming the original image size is defined by 'default' values
+       or intrinsic size, we can leave these out or set them to
+       whatever the 'as is' size is (e.g., width: 100% for mobile flow).
+       If 'as is' means the image's intrinsic size, no styles are needed here. */
+
+    /* For demonstration, let's assume 'as is' means it takes up the full width of its container on mobile: */
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Media query for desktop/big screens (e.g., screens wider than 1024px) */
+@media (min-width: 1024px) {
+    .ceo {
+        /* Make the image half the size on large screens */
+        width: 50%;
+        /* If you need to ensure it doesn't exceed a max height or width: */
+        max-width: 50%;
+        height: auto; /* Maintain aspect ratio */
+
+        /* Optional: Add 'display: block' and margins to center the image if needed */
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+     /* =========================================
+           3. FOOTER CONTACT ICON STYLING
+           ========================================= */
+        .f-contact ul li i.icon {
+            /* Set the background color to #78b71e */
+            background: #78b71e; 
+            
+            /* Ensure the background is visible and the icon is centered */
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            
+            /* Define size and shape */
+            height: 40px; 
+            width: 40px; 
+            border-radius: 50%; /* Makes it a circle */
+            
+            /* Adjust icon color and spacing */
+            color: #2b2c30; /* Use a dark color for the icon itself to stand out on the green background */
+            margin-right: 15px;
+            font-size: 18px;
+        }
+
+        /* Adjust the spacing for the text next to the icon (if necessary) */
+        .f-contact ul li span {
+            display: inline-block;
+            vertical-align: top;
+        }
+    </style>
+    </head>
+    <body class="dark">
+             <!-- Lines -->
+        <div class="content-lines-wrapper">
+            <div class="content-lines-inner">
+                <div class="content-lines"></div>
+            </div>
+        </div>
+            <!-- Lines -->
+         <!-- header -->
+        <header class="header-area header-three">  
+			  <div id="header-sticky" class="menu-area">
+                <div class="container-fluid second-menu">
+                        <div class="row align-items-center">
+                        <div class="col-lg-1 col-md-12 d-none d-lg-block">
+                            <a href="#" class="menu-tigger"><img  src="img/bg/toggle-menu.png" alt="logo"></a>
+                        </div>
+                        <div class="col-lg-1 col-md-12">
+                            <div class="logo">
+                                <a href="index.html"><img id="logo-img"  src="img/logo/logo.png" alt="logo"></a>
+                            </div>
+                        </div>
+                           <div class="col-xl-8 col-lg-8 col-md-7 text-center">
+                              
+                                <div class="main-menu">
+                                    <nav id="mobile-menu">
+                                        <ul>
+                                             <li class="has-sub">
+                                                <a href="index.html">Home</a>
+                                                 
+                                            </li>
+                                            <li><a href="gallery.html">Gallery</a></li>
+                                            <li><a href="#about">About </a></li>
+                                            <li class="has-sub"> 
+                                              <a href="booking.html">Booking</a>
+                                            </li>
+                                             
+                                            <li><a href="#team">Founder</a></li>
+                                            <li><a href="#contact">Contact</a></li>
+                                            <li class="has-sub">
+                                                <a href="#">web-apps</a>
+                                                <ul>
+                                                    <li><a href="https://fashionsakala.netlify.app/">Fashion-Sakala-JR-Portfolio</a></li>
+                                                    <li><a href="https://taurai.com/fashion/">Fashion-Sakala-Foundation</a></li>
+                                                    <li><a href="https://www.gracimorloans.com/">Gracimor-loan</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                            <button id="mode-toggle" class="btn" style="background: #78b71e; color: #000; padding: 10px 15px; border-radius: 50%;"><i class="fas fa-sun"></i></button>
+                                            <li><a href="https://taurai.com/gracimor/">sign_in</a></li>
+                                        </li>                                                  
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>  
+                             <div class="col-xl-2 col-lg-2 col-md-3 text-center d-none d-lg-block">
+                             <div class="right-menu">
+                                    <ul>
+                                        <li>
+                                            <div class="text">
+                                                <span>Request tour</span>
+                                                <strong>0973580350</strong>
+                                            </div>                                        
+                                        </li>
+                                        
+                                    </ul>
+                                 </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="mobile-menu"></div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </header>
+        <!-- header-end -->
+         <!-- offcanvas-area -->
+                <div class="offcanvas-menu">
+                <span class="menu-close"><i class="fas fa-times"></i></span>
+              <form role="search" method="get" id="searchform"   class="searchform" action="http://wordpress.zcube.in/xconsulta/">
+                                <input type="text" name="s" id="search" value="" placeholder="Search"  />
+                                <button><i class="fa fa-search"></i></button>
+                            </form>
+
+                    
+                    <div id="cssmenu3" class="menu-one-page-menu-container">
+                        <ul  class="menu">
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="index.html">Home</a></li>
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="#skill">About Us</a></li>
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="booking.html">booking</a></li>
+                             
+                             <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="#team">Founder </a></li>
+                             
+                             
+                             
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>  
+                    
+                    <div id="cssmenu2" class="menu-one-page-menu-container">
+                        <ul id="menu-one-page-menu-12" class="menu">
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="#home"><span>+260 960 565 108</span></a></li>
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="#howitwork"><span>info@gracimorproperties.com</span></a></li>
+                        </ul>
+                    </div>                
+            </div>
+            <div class="offcanvas-overly"></div>
+                 <!-- offcanvas-end -->
+        <!-- main-area -->
+        <main>
+           <!-- slider-area -->
+            <section id="home" class="slider-area fix p-relative">
+                <video preload="auto" autoplay loop muted playsinline class="background-clip">
+                    <source src="video/video.mp4" type="video/mp4">
+                </video>
+                <!-- slider-info-area -->
+                <div class="slider-info">
+                    <div class="email">
+                      <span></span> info@gracimorproperties.com
+                    </div>
+                      <div class="social">
+                            <span>
+                                <a href="https://www.facebook.com/FASHIONJRNEWS" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                                <a href="https://api.whatsapp.com/send?phone=+260973580350" title="Whatsapp"><i class="fab fa-whatsapp"></i></a>             
+                                <a href="https://www.instagram.com/gracimorproperties/" title="Instagram"><i class="fab fa-instagram"></i></a>
+                                <a href="#" title="Twitter"><i class="fab fa-whatsapp"></i></a>
+                           </span>                    
+                           <!--  /social media icon redux -->                               
+                        </div>
+                </div>
+                <!-- slider-info-area-end -->
+                
+                <div class="slider-active" style="background: transparent;">
+                    <div class="single-slider slider-bg d-flex align-items-center">
+                          <!-- Lines -->
+                            <div class="content-lines-wrapper">
+                                <div class="content-lines-inner">
+                                    <div class="content-lines"></div>
+                                </div>
+                            </div>
+                                <!-- Lines -->
+                            <div class="overlay-bg"></div>
+                    
+                        <div class="container">
+                             <div class="slider-price">
+										<p>top tier</p>
+										<h2><sub>Living</h2>
+                               </div>
+                           <div class="row justify-content-center align-items-center">
+                              
+                                <div class="col-lg-7 col-md-12">
+                                    <div class="slider-content s-slider-content mt-20">
+                                         <h5 data-animation="fadeInDown" data-delay=".4s">Hyndland Estate</h5>
+                                         <h2 data-animation="fadeInUp" data-delay=".4s">Luxury Apertment In Meanwood Ibex</h2>
+                                        
+                                          <div class="slider-btn">     
+                                            <a href="contact.html" class="btn ss-btn mr-15" data-animation="fadeInLeft" data-delay=".4s">get a free tour</a>
+                                             <a href="projects.html" class="rating" data-animation="fadeInRight" data-delay=".4s">
+                                                 <span><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                                                 Ratings By Users
+                                              </a>
+                                        </div>        
+                                                              
+                                    </div>
+                                </div>
+                                <div class="col-lg-5 col-md-5 p-relative">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="single-slider slider-bg d-flex align-items-center">
+                          <!-- Lines -->
+                            <div class="content-lines-wrapper">
+                                <div class="content-lines-inner">
+                                    <div class="content-lines"></div>
+                                </div>
+                            </div>
+                                <!-- Lines -->
+                            <div class="overlay-bg"></div>
+                        <div class="container">
+                           <div class="row justify-content-center align-items-center">
+                              
+                                <div class="col-lg-7 col-md-12">
+                                    <div class="slider-content s-slider-content mt-20">
+                                         <h5 data-animation="fadeInDown" data-delay=".4s">Hyndland Estate</h5>
+                                         <h2 data-animation="fadeInUp" data-delay=".4s">Gracimor Apertments In Meanwood Ibex</h2>
+                                        
+                                          <div class="slider-btn">     
+                                            <a href="contact.html" class="btn ss-btn mr-15" data-animation="fadeInLeft" data-delay=".4s">get a free tour</a>
+                                             <a href="projects.html" class="rating" data-animation="fadeInRight" data-delay=".4s">
+                                                 <span><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                                                 Ratings By Users
+                                              </a>
+                                        </div>        
+                                                              
+                                    </div>
+                                </div>
+                                <div class="col-lg-5 col-md-5 p-relative">
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="single-slider slider-bg d-flex align-items-center">
+                          <!-- Lines -->
+                            <div class="content-lines-wrapper">
+                                <div class="content-lines-inner">
+                                    <div class="content-lines"></div>
+                                </div>
+                            </div>
+                                <!-- Lines -->
+                            <div class="overlay-bg"></div>
+                        <div class="container">
+                           <div class="row justify-content-center align-items-center">
+                              
+                                <div class="col-lg-7 col-md-7">
+                                    <div class="slider-content s-slider-content mt-20">
+                                         <h5 data-animation="fadeInDown" data-delay=".4s">Gracimor Hyndland Estate</h5>
+                                         <h2 data-animation="fadeInUp" data-delay=".4s">Luxury Apertment In Lusaka Meanwood Ibex</h2>
+                                        
+                                           <div class="slider-btn">     
+                                            <a href="contact.html" class="btn ss-btn mr-15" data-animation="fadeInLeft" data-delay=".4s">get a free tour</a>
+                                             <a href="projects.html" class="rating" data-animation="fadeInRight" data-delay=".4s">
+                                                 <span><i class="fas fa-star"></i><i class="fas fa-star"><i class="fas fa-star"></i></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                                                 Ratings By Users
+                                              </a>
+                                        </div>                  
+                                    </div>
+                                </div>
+                                <div class="col-lg-5 col-md-5 p-relative">
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- slider-area-end -->
+             <!-- about-area -->
+            <section id="about" class="about-area about-p pt-120 pb-120 p-relative fix">
+                <div class="container">
+                    <div class="row justify-content-center align-items-center">
+                        <div class="col-lg-6 col-md-12 col-sm-12">
+                            <div class="s-about-img p-relative  wow fadeInLeft animated" data-animation="fadeInLeft" data-delay=".4s">
+                                <img src="img/features/about_img_02.png" alt="img">   
+                               <div class="about-text second-about">
+                                    <span>8+</span>
+                                    <p>Apartments</p>
+                                </div>
+                                <div class="about-icon">
+                                     <img src="img/features/about_img_03.png" alt="img">   
+                                </div>
+                            </div>
+                          
+                        </div>
+                        <div class="col-lg-6 col-md-12 col-sm-12">
+                            <div class="about-content s-about-content pl-60 wow fadeInRight  animated" data-animation="fadeInRight" data-delay=".4s">
+                                <div class="about-title second-title pb-25">  
+                                    <h5>About us.</h5>
+                                    <h2>Luxury Living & Premium Rental Homes</h2>                                   
+                                </div>
+                                    <p>Gracimor Properties offers premium residential apartments in Meanwood Ibex Hill, combining luxury, security, and convenience in one of Lusaka’s most sought-after neighborhoods.</p>
+                                   <div class="about-content3 mt-30 mb-35">
+                                        <div class="row">
+                                        <div class="col-md-12">
+                                         <ul class="green">                                              
+                                                <li>24/7 Security & CCTV</li>
+                                                <li>Modern Smart Home Features</li>
+                                                <li>Prime Lusaka Location</li>
+                                                <li>Backup Power & Water</li>    
+                                           </ul>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <div class="about-user">
+                                        <div class="img"><img src="img/features/user-about.png" alt="img"></div>
+                                        <div class="text">
+                                            <h5>Cinthu Kapepula</h5>
+                                            <p>+260 973580350</p>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- about-area-end -->
+            
+             <!-- services-three-area -->
+            <section id="services" class="services-area services-bg  p-relative fix pt-120 pb-90" style="background: #2b2c30;">
+                <div class="container">
+                    <div class="row justify-content-center align-items-center">
+                            <div class="col-lg-12 col-md-12">
+                                <div class="section-title p-relative mb-50 wow fadeInLeft  animated" data-animation="fadeInLeft" data-delay=".4s">
+                                 <h5>Why Choose Us</h5>
+                                <h2>
+                                Features of Gracimor Living
+                                </h2>
+                                
+                            </div>
+                            </div>
+                           
+                        </div>
+                    <div class="follower">
+                    <div class="row services-active">
+                              
+                              <div class="col-lg-3 col-md-6">
+                                 <div class="s-single-services mb-30 wow fadeInUp  animated" data-animation="fadeInUp" data-delay=".2s">
+                                     <div class="services-icon2">
+                                       <img src="img/icon/se-icon1-dark.png" alt="img">
+                                    </div>
+                                    <div class="second-services-content">
+                                        <span>01</span>
+                                        <h3><a href="single-service.html">Smart Living Space</a></h3>
+                                    </div>
+                                     <div class="services-icon mt-60">
+                                     <img src="img/icon/se-icon1.png" alt="img">
+                                    </div>
+                                </div>
+                            </div>
+                               <div class="col-lg-3 col-md-6">
+                                 <div class="s-single-services mb-30 wow fadeInUp  animated" data-animation="fadeInUp" data-delay=".2s">
+                                      <div class="services-icon2">
+                                       <img src="img/icon/se-icon2-dark.png" alt="img">
+                                    </div>
+                                    <div class="second-services-content">
+                                        <span>02</span>
+                                        <h3><a href="single-service.html">Eco Friendly Environments</a></h3>
+                                    </div>
+                                     <div class="services-icon mt-60">
+                                     <img src="img/icon/se-icon2.png" alt="img">
+                                    </div>
+                                </div>
+                            </div>
+                              <div class="col-lg-3 col-md-6">
+                                 <div class="s-single-services mb-30 wow fadeInUp  animated" data-animation="fadeInUp" data-delay=".2s">
+                                     <div class="services-icon2">
+                                       <img src="img/icon/se-icon3-dark.png" alt="img">
+                                    </div>
+                                    <div class="second-services-content">
+                                        <span>03</span>
+                                        <h3><a href="single-service.html">Human In Mindset</a></h3>
+                                    </div>
+                                     <div class="services-icon mt-60">
+                                     <img src="img/icon/se-icon3.png" alt="img">
+                                    </div>
+                                </div>
+                            </div>
+                             <div class="col-lg-3 col-md-6">
+                                 <div class="s-single-services mb-30 wow fadeInUp  animated" data-animation="fadeInUp" data-delay=".2s">
+                                     <div class="services-icon2">
+                                       <img src="img/icon/se-icon4-dark.png" alt="img">
+                                    </div>
+                                    <div class="second-services-content">
+                                        <span>04</span>
+                                        <h3><a href="single-service.html">Built With Modern Tech</a></h3>
+                                    </div>
+                                     <div class="services-icon mt-60">
+                                     <img src="img/icon/se-icon4.png" alt="img">
+                                    </div>
+                                </div>
+                            </div>
+                         <div class="col-lg-3 col-md-6">
+                                 <div class="s-single-services mb-30 wow fadeInUp  animated" data-animation="fadeInUp" data-delay=".2s">
+                                      <div class="services-icon2">
+                                       <img src="img/icon/se-icon1-dark.png" alt="img">
+                                    </div>
+                                    <div class="second-services-content">
+                                        <span>05</span>
+                                        <h3><a href="single-service.html">Award Winner Design</a></h3>
+                                    </div>
+                                     <div class="services-icon mt-60">
+                                     <img src="img/icon/se-icon1.png" alt="img">
+                                    </div>
+                                </div>
+                            </div>
+                      <div class="col-lg-3 col-md-6">
+                                 <div class="s-single-services mb-30 wow fadeInUp  animated" data-animation="fadeInUp" data-delay=".2s">
+                                      <div class="services-icon2">
+                                       <img src="img/icon/se-icon5-dark.png" alt="img">
+                                    </div>
+                                    <div class="second-services-content">
+                                        <span>06</span>
+                                        <h3><a href="single-service.html">Attractive Location</a></h3>
+                                    </div>
+                                     <div class="services-icon mt-60">
+                                     <img src="img/icon/se-icon5.png" alt="img">
+                                    </div>
+                                </div>
+                            </div>
+                         <div class="col-lg-3 col-md-6">
+                                 <div class="s-single-services mb-30 wow fadeInUp  animated" data-animation="fadeInUp" data-delay=".2s">
+                                     <div class="services-icon2">
+                                       <img src="img/icon/se-icon1-dark.png" alt="img">
+                                    </div>
+                                    <div class="second-services-content">
+                                        <span>07</span>
+                                        <h3><a href="single-service.html">Smart Living Space</a></h3>
+                                    </div>
+                                     <div class="services-icon mt-60">
+                                     <img src="img/icon/se-icon1.png" alt="img">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+					   
+                     
+                    </div>
+            </section>
+           <!-- services-three-area -->
+            <!-- apartments-area -->
+            
+        </div>
+            </section>
+            <!-- apartments-area-end -->
+              <!-- video-area -->
+            <section id="video" class="video-area pb-120 p-relative fix">
+                <div class="container-fluid">                   
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="section-title">
+                                <h2>Gracimor Gracimor</h2>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                      <div class="container">             
+                      <div class="row justify-content-center align-items-center">
+                        <div class="col-lg-12">                           
+                            <div class="tab-content" id="myTabContent">
+                              <div class="tab-pane fade show active" id="voverview" role="tabpanel">
+                                   <div class="s-video-wrap">
+                                        <div class="video-img">
+                                             <img src="img/bg/vedio-img.png" alt="img">
+                                        </div>
+                                        <div class="s-video-content">
+                                            <a href="https://www.youtube.com/watch?v=ABbsb7mP1Ts" class="popup-video mb-50"><img src="img/bg/play-button.png" alt="circle_right"></a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                              <div class="tab-pane fade" id="degre" role="tabpanel">
+                                 <div class="s-video-wrap">
+                                        <div class="video-img">
+                                             <img src="img/bg/vedio-img3.png" alt="img">
+                                        </div>
+                                        <div class="s-video-content">
+                                            <a href="https://www.youtube.com/watch?v=zSmNgt0rt44" class="popup-video mb-50"><img src="img/bg/play-button.png" alt="circle_right"></a>
+
+                                        </div>
+                                    </div>  
+                              </div>
+                              <div class="tab-pane fade" id="vgallery" role="tabpanel">
+                                 <div class="s-video-wrap">
+                                        <div class="video-img">
+                                             <img src="img/bg/vedio-img4.png" alt="img">
+                                        </div>
+                                        <div class="s-video-content">
+                                            <a href="https://www.youtube.com/watch?v=VdRhdjoSh9I" class="popup-video mb-50"><img src="img/bg/play-button.png" alt="circle_right"></a>
+
+                                        </div>
+                                    </div>  
+                              </div>
+                            </div>
+                            
+                        </div>
+                        <div class="col-lg-12">
+                            <ul class="nav nav-tabs">
+                                  <li>
+                                    <span class="active" id="home-tab" data-bs-toggle="tab" data-bs-target="#voverview" role="tab">Overview</span>
+                                  </li>
+                                  <li >
+                                    <span id="profile-tab" data-bs-toggle="tab" data-bs-target="#degre" role="tab">Transport</span>
+                                  </li>
+                                  <li>
+                                    <span id="contact-tab" data-bs-toggle="tab" data-bs-target="#vgallery" role="tab" aria-controls="vgallery" aria-selected="false">Aerial view</span>
+                                  </li>
+                            </ul>
+                           
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- video-area-end -->
+              <!-- counter-area -->
+            <div class="counter-area p-relative pt-120 pb-120" style="background-color: #fff; background-size: cover;">
+                <div class="container">
+               
+                    <div class="row p-relative">
+                         <div class="col-lg-3 col-md-6 col-sm-12">
+                             <div class="single-counter wow fadeInUp animated" data-animation="fadeInDown animated" data-delay=".2s">
+                                <div class="counter p-relative">
+                                    <div class="number">01</div>
+                                    <h6>Apartments</h6>
+                                    <span class="count">8</span> 
+                                    <span>+</span>                              
+                                    <p>Current number of apartments .</p>
+                                </div>
+                               
+                            </div>
+                        </div>
+                      <div class="col-lg-3 col-md-6 col-sm-12">
+                            <div class="single-counter wow fadeInUp animated" data-animation="fadeInDown animated" data-delay=".2s">
+                                <div class="counter p-relative">
+                                    <div class="number">02</div>
+                                    <h6>Happy Clients</h6>
+                                    <span class="count">200</span>   
+                                    <span>+</span>                          
+                                    <p>Happy client list on average</p>
+                                </div>
+                               
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-12">
+                            <div class="single-counter wow fadeInUp animated" data-animation="fadeInDown animated" data-delay=".2s">
+                                  <div class="counter p-relative">
+                                    <div class="number">03</div>
+                                    <h6>Vehicles</h6>
+                                    <span class="count">4</span>    
+                                      <span>Cars</span>                                   
+                                    <p>Apartments vehicles.</p>
+                                </div>
+                              
+                            </div>
+                        </div>
+                         <div class="col-lg-3 col-md-6 col-sm-12">
+                            <div class="single-counter wow fadeInUp animated" data-animation="fadeInDown animated" data-delay=".2s">
+                                <div class="counter p-relative">
+                                    <div class="number">04</div>
+                                    <h6>Cleaners</h6>
+                                    <span class="count">24</span>     
+                                    <span>hrs</span>                            
+                                    <p>24/7 cleaning services provided.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- counter-area-end -->	
+            <!-- apartments-area -->
+            <section id="apartment" class="apartments pt-120 pb-90  p-relative fix">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-xl-8 col-lg-10">
+                            <div class="section-title text-center mb-50 wow fadeInDown animated" data-animation="fadeInDown animated" data-delay=".2s">
+                                <h5>apertment Plannings</h5>
+                                <h2>Apartment Structure</h2>
+                            </div>
+                        </div>
+                    </div>
+
+              <div class="row justify-content-center ">
+			  <div class="col-lg-3">
+			  </div>
+                <div class="col-xl-6 col-lg-12 col-md-12">
+                  <nav>
+                    <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+                      <a class="nav-item nav-link active" id="nav-home-tab" data-bs-toggle="tab" href="#nav-home" role="tab" aria-bs-controls="nav-home" aria-selected="true">Living Room</a>
+                      <a class="nav-item nav-link" id="nav-profile-tab" data-bs-toggle="tab" href="#nav-profile" role="tab" aria-bs-controls="nav-profile" aria-selected="false">Bedroom</a>
+                      <a class="nav-item nav-link" id="nav-contact-tab" data-bs-toggle="tab" href="#nav-contact" role="tab" aria-bs-controls="nav-contact" aria-selected="false">Kitchen</a>
+                      <a class="nav-item nav-link" id="nav-about-tab" data-bs-toggle="tab" href="#nav-about" role="tab" aria-bs-controls="nav-about" aria-selected="false"> Bathroom</a>
+                    </div>
+                  </nav>
+				  </div>
+				  <div class="col-lg-3">
+			  </div>
+				   <div class="col-lg-10">
+                  <div class="tab-content py-3 px-3 px-sm-0 mt-50" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+					 <div class="row">		
+                         <div class="col-lg-8">
+							<div class="apartments-img">
+								<img src="img/bg/plan.png" alt="floor-chart"/>
+							</div>
+						</div>
+						<div class="col-lg-4">   
+						<ul>
+							<li>Apartments <span class="after"> 9</span></li>
+							<li>Bedrooms <span class="after"> 03</span></li>
+							<li>Backup-power <span class="after"> 24/7</span></li>
+							<li>Garage <span class="after"> 01</span></li>
+							<li>Area <span class="after"> Meanwood Ibex</span></li>
+							<li>Vehicles <span class="after"> 04</span></li>
+						</ul>
+                            <a href="#skill" class="btn ss-btn smoth-scroll mt-30">get a free tour</a>
+						</div>
+						
+					</div>
+                     
+                    </div>
+                    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                      <div class="row">		
+                         <div class="col-lg-8">
+							<div class="apartments-img">
+								<img src="img/bg/plan1.png" alt="floor-chart"/>
+							</div>
+						</div>
+						<div class="col-lg-4">   
+						<ul>
+							<li>Apartments <span class="after"> 9</span></li>
+							<li>Bedrooms <span class="after"> 03</span></li>
+							<li>Backup-power <span class="after"> 24/7</span></li>
+							<li>Garage <span class="after"> 01</span></li>
+							<li>Area <span class="after"> Meanwood Ibex</span></li>
+							<li>Vehicles <span class="after"> 04</span></li>
+						</ul>
+                            <a href="#skill" class="btn ss-btn smoth-scroll mt-30">get a free tour</a>
+						</div>
+						
+					</div>
+                    </div>
+                    <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                      <div class="row">		
+                         <div class="col-lg-8">
+							<div class="apartments-img">
+								<img src="img/bg/plan3.png" alt="floor-chart"/>
+							</div>
+						</div>
+						<div class="col-lg-4">   
+						<ul>
+							<li>Apartments <span class="after"> 9</span></li>
+							<li>Bedrooms <span class="after"> 03</span></li>
+							<li>Backup-power <span class="after"> 24/7</span></li>
+							<li>Garage <span class="after"> 01</span></li>
+							<li>Area <span class="after"> Meanwood Ibex</span></li>
+							<li>Vehicles <span class="after"> 04</span></li>
+						</ul>
+                            <a href="#skill" class="btn ss-btn smoth-scroll mt-30">get a free tour</a>
+						</div>
+						
+					</div>
+                    </div>
+                    <div class="tab-pane fade" id="nav-about" role="tabpanel" aria-labelledby="nav-about-tab">
+                      <div class="row">		
+                         <div class="col-lg-8">
+							<div class="apartments-img">
+								<img src="img/bg/plan2.png" alt="floor-chart"/>
+							</div>
+						</div>
+						<div class="col-lg-4">   
+						<ul>
+							<li>Apartments <span class="after"> 9</span></li>
+							<li>Bedrooms <span class="after"> 03</span></li>
+							<li>Backup-power <span class="after"> 24/7</span></li>
+							<li>Garage <span class="after"> 01</span></li>
+							<li>Area <span class="after"> Meanwood Ibex</span></li>
+							<li>Vehicles <span class="after"> 04</span></li>
+						</ul>
+                            <a href="#skill" class="btn ss-btn smoth-scroll mt-30">get a free tour</a>
+						</div>
+						
+					</div>
+                    </div>
+                  </div>
+                
+                </div>
+              </div>
+        </div>
+
+            </section>
+            <!-- apartments-area-end -->
+            <!-- gallery-area -->
+            <section id="portfolio" class="pt-120 pb-170 fix" style="background: #2b2c30;">
+                <div class="container">                  
+					<div class="portfolio ">
+                        <div class="row align-items-center">
+                             <div class="col-lg-6 col-md-12">
+                                <div class="section-title p-relative mb-50 wow fadeInLeft  animated" data-animation="fadeInLeft" data-delay=".4s">
+                                 <h5>Views</h5>
+                                <h2>
+                                   Gracimor hyndlands
+                                </h2>
+                            </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 text-right">
+                             
+                            </div>
+                        </div>
+                        <div class="galler-outer">
+                        <div class="home-blog-active wow fadeInUp  animated" data-animation="fadeInUp" data-delay=".4s">
+                            <div class="grid-item financial">
+                                <a class="popup-image" href="img/gallery/protfolio-img01.png">
+                                <figure class="gallery-image">                            
+                                  <img src="img/gallery/protfolio-img01.png" alt="img" class="img"> 
+                                    
+                                     <figcaption>
+                                        <span>View 01</span>
+                                        <h4>Outdoors</h4>
+                                    </figcaption>
+                                </figure>
+                              </a>
+                            </div>
+                            <div class="grid-item financial banking">
+                               <a class="popup-image" href="img/gallery/protfolio-img02.png">
+                                    <figure class="gallery-image">                            
+                                     <img src="img/gallery/protfolio-img02.png" alt="img" class="img">      
+                                       
+                                         <figcaption>
+                                            <span>View 02</span>
+                                            <h4>Esthetics</h4>
+                                        </figcaption>
+                                    </figure>
+                                  </a>
+                            </div>
+                             <div class="grid-item insurance">
+                                    <a class="popup-image" href="img/gallery/protfolio-img01.png">
+                                    <figure class="gallery-image">                               
+                                       <img src="img/gallery/protfolio-img03.png" alt="img" class="img">      
+                                         
+                                         <figcaption>
+                                            <span>View 03</span>
+                                            <h4>Outdoors</h4>
+                                        </figcaption>
+                                    </figure>
+                                  </a>
+                            </div>
+                              <div class="grid-item insurance">
+                                    <a class="popup-image" href="img/gallery/protfolio-img02.png">
+                                    <figure class="gallery-image">                               
+                                       <img src="img/gallery/protfolio-img02.png" alt="img" class="img">      
+                                         
+                                         <figcaption>
+                                            <span>View 02</span>
+                                            <h4>Esthetics</h4>
+                                        </figcaption>
+                                    </figure>
+                                  </a>
+                            </div>
+                      </div>
+                      </div>
+                    </div>
+                </div>
+            </section>
+            <!-- gallery-area-end -->
+             <!-- brand-area -->
+            <div class="brand-area">
+                <div class="container">
+                    <div class="row brand-active">
+                        <div class="col-xl-2">
+                            <div class="single-brand">
+                                <a href="#home"><img src="img/brand/apartments.png" alt="img"></a>
+                            </div>
+                        </div>
+                        <div class="col-xl-2">
+                            <div class="single-brand">
+                                 <a href="https://fashionsakala.netlify.app/"><img src="img/brand/fs10.png" alt="img"></a>
+                            </div>
+                        </div>
+                        <div class="col-xl-2">
+                            <div class="single-brand">
+                                 <a href="https://www.gracimorloans.com/"><img src="img/brand/loans.png" alt="img"></a>
+                            </div>
+                        </div>
+                        <div class="col-xl-2">
+                            <div class="single-brand">
+                                  <a href="#home"><img src="img/brand/apartments.png" alt="img"></a>
+                            </div>
+                        </div>
+                        <div class="col-xl-2">
+                            <div class="single-brand">
+                                 <a href="https://fashionsakala.netlify.app/"><img src="img/brand/fs10.png" alt="img"></a>
+                            </div>
+                        </div>
+                        <div class="col-xl-2">
+                            <div class="single-brand">
+                                 <a href="https://www.gracimorloans.com/"><img src="img/brand/loans.png" alt="img"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12 text-center">
+                            <p>Online platform links</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- brand-area-end -->
+             <!-- faq-area -->
+            <section class="faq-area fix pt-120 pb-90">
+                <div class="container">
+    
+                    <div class="row">                        
+                       
+                        <div class="col-lg-6">
+                           <div class="section-title mb-50">
+                               <h5>some question & answer</h5>
+                                <h2>FAQ.</h2>
+                            </div>
+                             <ul class="nav nav-tabs">
+                                <li><span data-bs-toggle="tab" data-bs-target="#development" role="tab">Booking & Reservations</span></li>
+                                <li><span data-bs-toggle="tab" data-bs-target="#careers" role="tab">Check-in & Check-out</span></li>
+                                <li><span data-bs-toggle="tab" data-bs-target="#support" role="tab">Amenities & Facilities</span></li>
+                                <li><span data-bs-toggle="tab" data-bs-target="#account" role="tab">House Rules & Policies</span></li>
+                            </ul>
+                            
+                        </div>
+                         <div class="col-lg-6">
+                            <div class="tab-content">
+                             <div class="tab-pane fade show active" id="development" role="tabpanel">
+                                <!-- faq-wrap -->
+                                <div class="faq-wrap">
+                                    <div class="accordion" id="accordionExample">
+                                        <div class="card">
+                                            <div class="card-header" id="headingThree">
+                                                <h2 class="mb-0">
+                                                    <button class="faq-btn" type="button" data-bs-toggle="collapse"
+                                                        data-bs-target="#collapseThree" aria-bs-expanded="true" aria-bs-controls="collapseThree">
+                                                      How do I book an apartment on your website?
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="collapseThree" class="collapse show" aria-bs-labelledby="headingThree"
+                                                data-bs-parent="#accordionExample">
+                                                <div class="card-body">
+                                                    You can book instantly by selecting your desired dates, choosing an available apartment, and completing the payment through Airbnb’s secure platform. No request or approval is needed for instant-book listings.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header" id="headingOne">
+                                                <h2 class="mb-0">
+                                                    <button class="faq-btn collapsed" type="button" data-bs-toggle="collapse"
+                                                        data-bs-target="#collapseOne" aria-bs-expanded="false" aria-bs-controls="collapseOne">
+                                                       What is the minimum and maximum length of stay?
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                                <div class="card-body">
+                                                    The minimum stay is 2 nights (some peak dates require 3–7 nights). The maximum stay is 90 nights unless otherwise agreed with the host.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header" id="headingTwo">
+                                                <h2 class="mb-0">
+                                                    <button class="faq-btn collapsed" type="button" data-bs-toggle="collapse"
+                                                        data-bs-target="#collapseTwo" aria-bs-expanded="false" aria-bs-controls="collapseTwo">
+                                                      Can I modify or cancel my reservation?
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                                <div class="card-body">
+                                                    Yes. You can modify or cancel your booking directly on Airbnb. Cancellation policies (Flexible, Moderate, or Strict) are clearly shown before booking and determine the refund amount.
+                                                </div>
+                                            </div>
+                                        </div>
+                                         <div class="card">
+                                            <div class="card-header" id="headingOne">
+                                                <h2 class="mb-0">
+                                                    <button class="faq-btn collapsed" type="button" data-bs-toggle="collapse"
+                                                        data-bs-target="#headingFour" aria-bs-expanded="false" aria-bs-controls="headingFour">
+                                                     Is there a security deposit?
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="headingFour" class="collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                                                <div class="card-body">
+                                                    Yes, a refundable security deposit of $300–$500 (depending on the unit) is authorized on your card before check-in but only charged if damage occurs.
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!-- faq-wrap-end -->
+                            </div>
+                             <div class="tab-pane fade" id="careers" role="tabpanel">
+                                 <!-- faq-wrap -->
+                                <div class="faq-wrap">
+                                    <div class="accordion">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <h2 class="mb-0">
+                                                    <button class="faq-btn" type="button" data-bs-toggle="collapse"
+                                                        data-bs-target="#careers-one" aria-bs-expanded="true" aria-bs-controls="careers-one">
+                                                      What are the check-in and check-out times?
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="careers-one" class="collapse show" aria-bs-labelledby="careers-one"
+                                                data-bs-parent="#accordionExample">
+                                                <div class="card-body">
+                                                    Standard check-in is after 3:00 PM and check-out is by 11:00 AM. Early check-in or late check-out may be available for an additional fee, subject to availability.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <h2 class="mb-0">
+                                                    <button class="faq-btn collapsed" type="button" data-bs-toggle="collapse"
+                                                        data-bs-target="#careers-two" aria-bs-expanded="false" aria-bs-controls="careers-two">
+                                                       How does check-in work?
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="careers-two" class="collapse" aria-labelledby="careers-two" data-bs-parent="#accordionExample">
+                                                <div class="card-body">
+                                                    All apartments are equipped with smart locks or lockboxes. You will receive a personalized access code and detailed instructions 24–48 hours before arrival.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <h2 class="mb-0">
+                                                    <button class="faq-btn collapsed" type="button" data-bs-toggle="collapse"
+                                                        data-bs-target="#careers-three" aria-bs-expanded="false" aria-bs-controls="careers-three">
+                                                      Can I drop off luggage before official check-in or after check-out?
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="careers-three" class="collapse" aria-labelledby="careers-three" data-bs-parent="#accordionExample">
+                                                <div class="card-body">
+                                                    Yes, we offer complimentary luggage storage in a secure area upon request (subject to availability).
+                                                </div>
+                                            </div>
+                                        </div>
+                                         <div class="card">
+                                            <div class="card-header">
+                                                <h2 class="mb-0">
+                                                    <button class="faq-btn collapsed" type="button" data-bs-toggle="collapse"
+                                                        data-bs-target="#careers-four" aria-bs-expanded="false" aria-bs-controls="careers-four">
+                                                     What do I need to bring or present at check-in?
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="careers-four" class="collapse" aria-labelledby="careers-four" data-bs-parent="#accordionExample">
+                                                <div class="card-body">
+                                                    Please bring a government-issued ID matching the reservation name. A quick photo verification may be requested for security.
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                 <!-- faq-wrap-end -->
+                              </div>
+                             <div class="tab-pane fade" id="support" role="tabpanel">
+                                 <!-- faq-wrap -->
+                                <div class="faq-wrap">
+                                    <div class="accordion">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <h2 class="mb-0">
+                                                    <button class="faq-btn" type="button" data-bs-toggle="collapse"
+                                                        data-bs-target="#support-one" aria-bs-expanded="true" aria-bs-controls="support-one">
+                                                      Is parking included?
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="support-one" class="collapse show" aria-bs-labelledby="support-one"
+                                                data-bs-parent="#accordionExample">
+                                                <div class="card-body">
+                                                    Yes, one complimentary parking space per apartment is provided in our covered garage. Additional vehicles can be accommodated for $15–$25/night.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <h2 class="mb-0">
+                                                    <button class="faq-btn collapsed" type="button" data-bs-toggle="collapse"
+                                                        data-bs-target="#support-three" aria-bs-expanded="false" aria-bs-controls="support-three">
+                                                      Do the apartments have Wi-Fi and is it fast enough for streaming/work?
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="support-three" class="collapse" aria-labelledby="support-three" data-bs-parent="#accordionExample">
+                                                <div class="card-body">
+                                                    Yes, every unit has high-speed fiber Wi-Fi (300–1000 Mbps). It reliably supports video calls, streaming, and remote work.
+                                                </div>
+                                            </div>
+                                        </div>
+                                         <div class="card">
+                                            <div class="card-header">
+                                                <h2 class="mb-0">
+                                                    <button class="faq-btn collapsed" type="button" data-bs-toggle="collapse"
+                                                        data-bs-target="#support-four" aria-bs-expanded="false" aria-bs-controls="support-four">
+                                                     Are the apartments fully furnished and equipped for cooking?
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="support-four" class="collapse" aria-labelledby="support-four" data-bs-parent="#accordionExample">
+                                                <div class="card-body">
+                                                    Yes, all apartments include a fully equipped kitchen (oven, stove, microwave, dishwasher, coffee maker, cookware, utensils, and basic condiments).
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                 <!-- faq-wrap-end -->
+                              </div>
+                             <div class="tab-pane fade" id="account" role="tabpanel">
+                                  <!-- faq-wrap -->
+                                <div class="faq-wrap">
+                                    <div class="accordion">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <h2 class="mb-0">
+                                                    <button class="faq-btn collapsed" type="button" data-bs-toggle="collapse"
+                                                        data-bs-target="#account-two" aria-bs-expanded="false" aria-bs-controls="account-two">
+                                                       Is smoking permitted?
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="account-two" class="collapse" aria-labelledby="account-two" data-bs-parent="#accordionExample">
+                                                <div class="card-body">
+                                                    No smoking of any kind (cigarettes, cigars, vaping, or cannabis) is allowed inside the apartments or common areas. A $500 fine applies for violations.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <h2 class="mb-0">
+                                                    <button class="faq-btn collapsed" type="button" data-bs-toggle="collapse"
+                                                        data-bs-target="#account-three" aria-bs-expanded="false" aria-bs-controls="account-three">
+                                                      Can I host visitors or parties?
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="account-three" class="collapse" aria-labelledby="account-three" data-bs-parent="#accordionExample">
+                                                <div class="card-body">
+                                                    Registered guests only. Parties, events, or gatherings exceeding the maximum occupancy are strictly prohibited. Quiet hours are 10 PM – 8 AM.
+                                                </div>
+                                            </div>
+                                        </div>
+                                         <div class="card">
+                                            <div class="card-header">
+                                                <h2 class="mb-0">
+                                                    <button class="faq-btn collapsed" type="button" data-bs-toggle="collapse"
+                                                        data-bs-target="#account-four" aria-bs-expanded="false" aria-bs-controls="account-four">
+                                                     Are pets allowed?
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="account-four" class="collapse" aria-labelledby="account-four" data-bs-parent="#accordionExample">
+                                                <div class="card-body">
+                                                    Select pet-friendly units are available for an additional $100 pet fee (up to 2 pets, max 50 lbs each). Please indicate pets when booking.
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                 <!-- faq-wrap-end -->  
+                              </div>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- faq-aread-end -->
+            <!-- team-area -->
+            <section id="team" class="team-area fix p-relative pt-120 pb-90" style="background: #2b2c30;">  
+                <div class="container">  
+                     <div class="row">
+                        <div class="col-lg-12">
+                            <div class="section-title text-center mb-50 ">
+                                <h5>Gracimor Hyndland Apartments</h5>
+                                <h2>Founder & CEO.</h2>
+                                <div class="single-team mb-30" >
+                                <div class="team-thumb">
+                                    <div class="brd">
+                                         <img class="ceo" src="img/team/team01.jpg" alt="img">                                        
+                                    </div>
+                                     <div class="team-info2">
+                                         <p>Founder and CEO.</p>
+                                        <h4><a href="team-single.html">FASHION SAKALA JUNIOR</a></h4>
+                                        <p>Meet our CEO, Fashion Sakala Junior. He founded and launched Gracimor Properties in Lusaka, Zambia, in June 2024. Driven by gratitude and a deep commitment to uplifting his homeland, Sakala combines athletic discipline with sharp business acumen, propelling Gracimor toward a future of excellence and lasting impact.</p>
+                                        <div class="team-social">
+                                            <ul>
+                                                <li><a href="https://www.facebook.com/FASHIONNJR" tabindex="0"><i class="fab fa-facebook-f"></i></a></li> 
+                                                <li> <a href="#" tabindex="0"><i class="fab fa-twitter"></i></a></li>
+                                                <li><a href="https://fashionsakala.netlify.app/" tabindex="0"><i class="fas fa-globe"></i></a></li>   
+                                                <li><a href="https://www.instagram.com/fashionjr10/" tabindex="0"><i class="fab fa-instagram"></i></a></li>   
+                                                   
+                                                <li><a href="#" tabindex="0"><i class="fab fa-linkedin-in"></i></a></li>   
+                                            </ul>       
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                   <!-- <div class="row">                   
+                        <div class="col-xl-3 col-lg-3">
+                            <div class="single-team mb-30" >
+                                <div class="team-thumb">
+                                    <div class="brd">
+                                         <img src="img/team/team01.jpg" alt="img">                                        
+                                    </div>
+                                     <div class="team-info">
+                                         <p>Designer</p>
+                                        <h4><a href="team-single.html">Howard Holmes</a></h4>
+                                        <div class="team-social">
+                                            <ul>
+                                                <li><a href="#" tabindex="0"><i class="fab fa-facebook-f"></i></a></li> 
+                                                <li> <a href="#" tabindex="0"><i class="fab fa-instagram"></i></a></li>   
+                                                <li><a href="#" tabindex="0"><i class="fab fa-whatsapp"></i></a></li>   
+                                                 
+                                            </ul>       
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                       <div class="col-xl-3 col-lg-3">
+                            <div class="single-team mb-30" >
+                                <div class="team-thumb">
+                                    <div class="brd">
+                                        <img src="img/team/team02.jpg" alt="img">
+                                    </div> 
+                                    <div class="team-info">
+                                         <p>Designer</p>
+                                        <h4><a href="team-single.html">Ella Thompson</a></h4>
+                                        <div class="team-social">
+                                            <ul>
+                                                <li><a href="#" tabindex="0"><i class="fab fa-facebook-f"></i></a></li> 
+                                                <li> <a href="#" tabindex="0"><i class="fab fa-instagram"></i></a></li>   
+                                                <li><a href="#" tabindex="0"><i class="fab fa-whatsapp"></i></a></li>   
+                                            </ul>       
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      <div class="col-xl-3 col-lg-3">
+                            <div class="single-team mb-30" >
+                                <div class="team-thumb">
+                                    <div class="brd">
+                                        <img src="img/team/team03.jpg" alt="img">
+                                    </div>
+                                    <div class="team-info">
+                                         <p>Designer</p>
+                                        <h4><a href="team-single.html">Vincent Cooper</a></h4>
+                                        <div class="team-social">
+                                            <ul>
+                                                <li><a href="#" tabindex="0"><i class="fab fa-facebook-f"></i></a></li> 
+                                                <li> <a href="#" tabindex="0"><i class="fab fa-instagram"></i></a></li>   
+                                                <li><a href="#" tabindex="0"><i class="fab fa-whatsapp"></i></a></li>   
+                                            </ul>       
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3">
+                            <div class="single-team mb-30" >
+                                <div class="team-thumb">
+                                    <div class="brd">
+                                         <img src="img/team/team04.jpg" alt="img">
+                                    </div>
+                                    <div class="team-info">
+                                         <p>Designer</p>
+                                        <h4><a href="team-single.html">Danielle Bryant</a></h4>                                       
+                                        <div class="team-social">
+                                            <ul>
+                                                <li><a href="#" tabindex="0"><i class="fab fa-facebook-f"></i></a></li> 
+                                                <li> <a href="#" tabindex="0"><i class="fab fa-instagram"></i></a></li>   
+                                                <li><a href="#" tabindex="0"><i class="fab fa-whatsapp"></i></a></li>    
+                                            </ul>       
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+                    </div> -->
+                   
+                </div>
+            </section>
+            <!-- team-area-end --> 
+            <!-- contact-area -->
+            <section id="contact" class="contact-area after-none contact-bg pt-120 p-relative fix">
+                <div class="container">
+             
+					<div class="row">
+						
+                         <div class="col-lg-6 col-md-12 order-1">
+                            <div class="section-title p-relative pr-60 mb-30 wow fadeInLeft  animated" data-animation="fadeInLeft" data-delay=".4s">
+                                 <h5>Contact</h5>
+                                <h2>
+                                get in touch
+                                </h2>
+                                <p>Have a question or need help with your booking? We’re here 24/7! Send us a message on Airbnb, or reach out directly</p>
+                            </div>
+                             
+                            <div class="contact-info">
+                                  <div class="single-cta wow fadeInUp animated" data-animation="fadeInDown animated" data-delay=".2s">
+                                    <ul>
+                                        <li><i class="fal fa-envelope"></i> info@gracimorproperties.com</li>
+                                        <li><i class="fal fa-phone"></i> +260 960 565 108</li>
+                                        <li><i class="fal fa-map-marker-alt"></i> Gracimor hyndlands, Meanwood Ibex, Lusaka.</li>
+                                    </ul>
+                                </div>
+                            </div>	                             
+                        </div>
+                         <div class="col-lg-6 col-md-12 order-2">
+                            <div class="contact-bg">      
+                                <form action="https://htmldemo.zcubethemes.com/castel/mail.php" method="post" class="contact-form">
+                                    <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="contact-field p-relative c-name mb-20">    
+                                            <i class="fas fa-user"></i>
+                                            <input type="text" id="firstn" name="firstn" placeholder="First Name" required>
+                                        </div>                               
+                                    </div>
+
+                                    <div class="col-lg-6">                               
+                                        <div class="contact-field p-relative c-subject mb-20">     
+                                            <i class="fas fa-envelope-open"></i>
+                                            <input type="text" id="email" name="email" placeholder="info@" required>
+                                        </div>
+                                    </div>		
+                                    <div class="col-lg-12">
+                                        <div class="contact-field p-relative c-message mb-30">      
+                                            <i class="fas fa-pencil"></i>
+                                            <textarea name="message" id="message" cols="30" rows="10" placeholder="Write comments"></textarea>
+                                        </div>
+                                        <div class="slider-btn">                                          
+                                                    <button class="btn ss-btn" data-animation="fadeInRight" data-delay=".8s">Submit Request</button>				
+                                                </div>                             
+                                    </div>
+                                    </div>
+                            </form>                            
+                            </div>    
+                        
+						</div>
+						</div>
+                        <div class="row">
+                        <div class="col-lg-12">
+                            <div class="map-img mt-120">                            
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3846.7330872415505!2d28.42975397471503!3d-15.390935113149077!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x194089001000419d%3A0x4792bade19800e44!2sGracimor%20hyndland!5e0!3m2!1sen!2szm!4v1763645687729!5m2!1sen!2szm" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </div>
+					</div>
+                    
+                </div>
+               
+            </section>
+            <!-- contact-area-end -->
+            <!-- testimonial-area -->
+            <section id="testimonial" class="testimonial-area pt-120 pb-90 p-relative fix" style="background-image: url(img/bg/testimonial-bg.html); background-size: cover;">
+                <div class="container">
+                    <div class="row">
+                         <div class="col-lg-12">
+                              <div class="section-title center-align mb-50 text-center">
+                                <h5>Our All User Feedbacks</h5>
+                                <h2>What Our Clients Says</h2>
+                            </div>
+                           
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="testimonial-active">
+                                <div class="single-testimonial">
+                                    <div class="review-icon">
+                                        <img src="img/testimonial/review-icon.png" alt="img">
+                                     </div>
+                                    <p>“ Loved the spotless apartment, fast Wi-Fi, 24/7 helpful host; perfect for business travel, already planning return stay. ”</p>
+                                    <div class="qt-img">
+                                    <img src="img/testimonial/qt-icon.png" alt="img">
+                                    </div>
+                                    <div class="testi-author">
+                                        <img src="img/testimonial/testi_avatar.png" alt="img">
+                                        <div class="ta-info">
+                                            <span>Entrepreneur</span>
+                                            <h6>Chileshe Mwiinga</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                               <div class="single-testimonial">
+                                   <div class="review-icon">
+                                        <img src="img/testimonial/review-icon.png" alt="img">
+                                     </div>
+                                     <p>“ Best UK Airbnb experience: smooth check-in, free secure parking, quiet yet central location, instant host responses. ”</p>
+                                    <div class="qt-img">
+                                    <img src="img/testimonial/qt-icon.png" alt="img">
+                                    </div>
+                                   <div class="testi-author">
+                                        <img src="img/testimonial/testi_avatar_02.png" alt="img">
+                                        <div class="ta-info">
+                                            <span>Accountant</span>
+                                            <h6>Mwansa Banda</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                               <div class="single-testimonial">
+                                   <div class="review-icon">
+                                        <img src="img/testimonial/review-icon.png" alt="img">
+                                     </div>
+                                     <p>“ Exceeded expectations with fully equipped kitchen, comfortable beds, stunning rooftop views; kids eager to return next summer. ”</p>
+                                    <div class="qt-img">
+                                    <img src="img/testimonial/qt-icon.png" alt="img">
+                                    </div>
+                                   <div class="testi-author">
+                                        <img src="img/testimonial/testi_avatar_03.png" alt="img">
+                                        <div class="ta-info">
+                                             <span>Stylist</span>
+                                            <h6>Natasha Chanda</h6>                                           
+                                        </div>
+                                    </div>
+                                </div>
+                               <div class="single-testimonial">
+                                    <div class="review-icon">
+                                        <img src="img/testimonial/review-icon.png" alt="img">
+                                     </div>
+                                    <p>“ Loved the spotless apartment, fast Wi-Fi, 24/7 helpful host; perfect for business travel, already planning return stay. ”</p>
+                                    <div class="qt-img">
+                                    <img src="img/testimonial/qt-icon.png" alt="img">
+                                    </div>
+                                    <div class="testi-author">
+                                        <img src="img/testimonial/testi_avatar.png" alt="img">
+                                        <div class="ta-info">
+                                            <span>Entrepreneur</span>
+                                            <h6>Chileshe Mwiinga</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                               <div class="single-testimonial">
+                                   <div class="review-icon">
+                                        <img src="img/testimonial/review-icon.png" alt="img">
+                                     </div>
+                                     <p>“ Best UK Airbnb experience: smooth check-in, free secure parking, quiet yet central location, instant host responses. ”</p>
+                                    <div class="qt-img">
+                                    <img src="img/testimonial/qt-icon.png" alt="img">
+                                    </div>
+                                   <div class="testi-author">
+                                        <img src="img/testimonial/testi_avatar_02.png" alt="img">
+                                        <div class="ta-info">
+                                            <span>Accountant</span>
+                                            <h6>Mwansa Banda</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                               <div class="single-testimonial">
+                                   <div class="review-icon">
+                                        <img src="img/testimonial/review-icon.png" alt="img">
+                                     </div>
+                                     <p>“ Exceeded expectations with fully equipped kitchen, comfortable beds, stunning rooftop views; kids eager to return next summer. ”</p>
+                                    <div class="qt-img">
+                                    <img src="img/testimonial/qt-icon.png" alt="img">
+                                    </div>
+                                   <div class="testi-author">
+                                        <img src="img/testimonial/testi_avatar_03.png" alt="img">
+                                        <div class="ta-info">
+                                             <span>Stylist</span>
+                                            <h6>Natasha Chanda</h6>                                           
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                       
+                    </div>
+                </div>
+            </section>
+            <!-- testimonial-area-end -->
+          
+              <!-- blog-area -->
+            <!-- <section id="blog" class="blog-area p-relative fix pt-120 pb-90" style="background: #2b2c30;">
+                <div class="container">
+                     <div class="row justify-content-center align-items-center">
+                            <div class="col-lg-6 col-md-6">
+                                <div class="section-title p-relative mb-50 wow fadeInLeft  animated" data-animation="fadeInLeft" data-delay=".4s">
+                                    <h5>blog & feeds</h5>
+                                    <h2>
+                                     Blog & Insights
+                                    </h2>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 text-right">
+                                <a href="#contact" class="btn ss-btn" data-animation="fadeInLeft" data-delay=".4s">More News </a>
+                            </div>
+                        </div>
+                    <div class="row">
+                       <div class="col-lg-4 col-md-6">
+                            <div class="single-post2 hover-zoomin mb-30 wow fadeInUp animated" data-animation="fadeInUp" data-delay=".4s">
+                                <div class="blog-thumb2">
+                                    <a href="blog-details.html"><img src="img/blog/inner_b1.jpg" alt="img"></a>
+                                </div>                    
+                                <div class="blog-content2">    
+                                   <div class="b-meta">
+                                        <div class="meta-info">
+                                            <ul>
+                                                <li>Jan 21, 2022 </li>
+                                                <li>Architecture</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <h4><a href="blog-details.html">Cras accumsan nulla nec lacus ultricies placerat.</a></h4> 
+                                </div>
+                            </div>
+                        </div>
+                         <div class="col-lg-4 col-md-6">
+                            <div class="single-post2 mb-30 hover-zoomin wow fadeInUp animated" data-animation="fadeInUp" data-delay=".4s">
+                                <div class="blog-thumb2">
+                                    <a href="blog-details.html"><img src="img/blog/inner_b2.jpg" alt="img"></a>
+                                </div>
+                                <div class="blog-content2">                                    
+                                    <div class="b-meta">
+                                        <div class="meta-info">
+                                            <ul>
+                                                <li>Jan 21, 2022 </li>
+                                                <li>Architecture</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <h4><a href="blog-details.html">Dras accumsan nulla nec lacus ultricies placerat.</a></h4> 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="single-post2 mb-30 hover-zoomin wow fadeInUp animated" data-animation="fadeInUp" data-delay=".4s">
+                                <div class="blog-thumb2">
+                                    <a href="blog-details.html"><img src="img/blog/inner_b3.jpg" alt="img"></a>
+                                </div>
+                                <div class="blog-content2">                                    
+                                   <div class="b-meta">
+                                        <div class="meta-info">
+                                            <ul>
+                                                <li>Jan 21, 2022 </li>
+                                                <li>Architecture</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <h4><a href="blog-details.html">Seas accumsan nulla nec lacus ultricies placerat.</a></h4>
+                                </div>
+                            </div>
+                        </div>
+                
+                        
+                    </div>
+                </div>
+            </section> -->
+            <!-- blog-area-end -->
+        </main>
+        <!-- main-area-end -->
+        <!-- footer -->
+        <footer class="footer-bg footer-p">
+        <div class="footer-top pt-90 pb-40">
+            <div class="container">
+                <div class="row justify-content-between">
+                    <div class="col-xl-4 col-lg-4 col-sm-6">
+                        <div class="footer-widget mb-30">
+                            <div class="f-widget-title">
+                                <img src="img/logo/logo.png" alt="img">
+                            </div>
+                            <div class="footer-text mb-20">
+                                <p>A new way to find a home you'll love. We have the most listings and constant updates.</p>
+                            </div>
+                            <div class="footer-social">
+                                <a href="https://www.facebook.com/FASHIONJRNEWS"><i class="fab fa-facebook-f"></i></a>
+            
+                                <a href="https://www.instagram.com/gracimorproperties/"><i class="fab fa-instagram"></i></a>
+                                <a href="https://api.whatsapp.com/send?phone=+260973580350"><i class="fab fa-whatsapp"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-2 col-sm-6">
+                        <div class="footer-widget mb-30">
+                            <div class="f-widget-title">
+                                <h2>Our Links</h2>
+                            </div>
+                            <div class="footer-link">
+                                <ul>
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="#about"> About Us</a></li>
+                                    <li><a href="gallery.html"> Gallery </a></li>
+                                    <li><a href="#contact"> Contact Us</a></li>
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-sm-6">
+                        <div class="footer-widget mb-30">
+                            <div class="f-widget-title">
+                                <h2>Contact Us</h2>
+                            </div>
+                            <div class="f-contact">
+                                <ul>
+                                    <li>
+                                        <i class="icon fal fa-phone"></i>
+                                        <span><a href="tel:+260960565108">+260960565108</a></span>
+                                    </li>
+                                    <li><i class="icon fal fa-envelope"></i>
+                                        <span>
+                                            <a href="mailto:info@gracimorproperties.com">info@gracimorproperties.com</a>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <i class="icon fal fa-map-marker-check"></i>
+                                        <span>Gracimor hyndlands <br>Meanwood Ibex Lusaka.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-wrap">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-12">
+                        <div class="copy-text text-center">
+                            All Rights Reserved. Gracimor properties 2025
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+        <!-- footer-end -->
+		<!-- JS here -->
+        <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+        <script src="js/vendor/jquery-3.6.0.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/slick.min.js"></script>
+        <script src="js/ajax-form.js"></script>
+        <script src="js/paroller.js"></script>
+        <script src="js/wow.min.js"></script>
+        <script src="js/js_isotope.pkgd.min.js"></script>
+        <script src="js/imagesloaded.min.js"></script>
+        <script src="js/parallax.min.js"></script>
+        <script src="js/jquery.waypoints.min.js"></script>
+        <script src="js/jquery.counterup.min.js"></script>
+        <script src="js/jquery.scrollUp.min.js"></script>
+        <script src="js/jquery.meanmenu.min.js"></script>
+        <script src="js/parallax-scroll.js"></script>
+        <script src="js/jquery.magnific-popup.min.js"></script>
+        <script src="js/element-in-view.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/mode-toggle.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const logoImg = document.getElementById('logo-img');
+                const modeToggle = document.getElementById('mode-toggle');
+                const body = document.body;
+
+                function updateLogo() {
+                    if (body.classList.contains('light-mode')) {
+                        logoImg.src = 'img/logo/logo-dark.png';
+                    } else {
+                        logoImg.src = 'img/logo/logo-white.png';
+                    }
+                }
+
+                // Initial logo setup
+                updateLogo();
+
+                // Update logo on mode toggle
+                modeToggle.addEventListener('click', function () {
+                    // We need a small delay to allow the 'light-mode' class to be toggled
+                    setTimeout(updateLogo, 10);
+                });
+            });
+        </script>
+    </body>
+
+</html>

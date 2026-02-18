@@ -1,0 +1,25 @@
+<?php
+
+namespace Database\Factories;
+
+use Illuminate\Database\Eloquent\Factories\Factory;
+use App\Models\Apartment;
+
+/**
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\ApartmentImage>
+ */
+class ApartmentImageFactory extends Factory
+{
+    /**
+     * Define the model's default state.
+     *
+     * @return array<string, mixed>
+     */
+    public function definition(): array
+    {
+        return [
+            'apartment_id' => Apartment::factory(),
+            'image_path' => 'img/apartment-placeholder/' . $this->faker->numberBetween(1, 6) . '.jpg',
+        ];
+    }
+}

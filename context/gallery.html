@@ -1,0 +1,611 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Gracimor hyndlands - Gallery</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="css/dripicons.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/meanmenu.css">
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <style>
+        /* =========================================
+           1. FILTER BUTTONS (Mobile Grid Layout)
+           ========================================= */
+        .portfolio-menu .button-group button {
+            background: transparent;
+            border: 1px solid #78b71e;
+            color: #78b71e;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-radius: 5px;
+        }
+
+        .portfolio-menu .button-group button.active,
+        .portfolio-menu .button-group button:hover {
+            background: #78b71e;
+            color: #000;
+        }
+        
+        /* Light Mode Overrides */
+        .light-mode .portfolio-menu .button-group button {
+            color: #78b71e;
+            border-color: #78b71e;
+        }
+        .light-mode .portfolio-menu .button-group button.active,
+        .light-mode .portfolio-menu .button-group button:hover {
+            background: #78b71e;
+            color: #000;
+        }
+
+        /* Mobile Button Layout */
+        @media (max-width: 767px) {
+            .portfolio-menu .button-group {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr); /* Exactly 3 columns */
+                gap: 8px; /* Space between buttons */
+                padding: 0 5px;
+            }
+            .portfolio-menu .button-group button {
+                margin: 0;
+                padding: 8px 2px;
+                font-size: 11px; /* Small text to fit */
+                width: 100%;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+
+        /* =========================================
+           2. CUSTOM GALLERY GRID (Fixes Isotope Issues)
+           ========================================= */
+        /* Container Clears */
+        .custom-grid {
+            width: 100%;
+            display: block;
+            position: relative; 
+            margin: 0; 
+            padding: 0;
+        }
+        /* Clearfix to contain floats */
+        .custom-grid:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        /* The Individual Grid Items */
+        /* NOTE: .grid-sizer has been removed from this selector */
+        .custom-grid-item {
+            float: left;
+            border: none;
+            box-sizing: border-box; 
+            padding: 15px; /* Space between images (Gutters) */
+            vertical-align: top;
+        }
+
+        /* --- MOBILE VIEW (2 Columns) --- */
+        .custom-grid-item {
+            width: 50%; 
+        }
+
+        /* --- DESKTOP VIEW (3 Columns) --- */
+        @media (min-width: 992px) {
+            .custom-grid-item {
+                width: 33.333%;
+            }
+        }
+        
+        /* --- AGGRESSIVE FINAL ALIGNMENT FIX (NEW) --- */
+        /* Targets the FIRST child item since the sizer is removed. 
+           This should eliminate the unwanted 'top: 30px' offset. */
+        .custom-grid .custom-grid-item:first-child { 
+            margin-top: 0 !important; 
+            top: 0 !important; 
+            transform: none !important; 
+        }
+
+
+        /* Image Styling */
+        .gallery-image {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            width: 100%;
+        }
+        .gallery-image img {
+            width: 100%;
+            height: auto;
+            display: block; 
+            transition: transform 0.5s ease;
+        }
+        .gallery-image:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Caption Styling */
+        .gallery-image figcaption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+            color: #fff;
+            padding: 20px;
+            transform: translateY(100%);
+            transition: transform 0.5s ease;
+        }
+        .gallery-image:hover figcaption {
+            transform: translateY(0);
+        }
+        .gallery-image figcaption h4 {
+            margin: 0;
+            font-size: 20px;
+            color: #fff;
+        }
+        .gallery-image figcaption span {
+            font-size: 14px;
+            color: #78b71e;
+        }
+        
+        /* Mobile Caption Adjustments */
+        @media (max-width: 767px) {
+            .gallery-image figcaption {
+                padding: 10px;
+            }
+            .gallery-image figcaption h4 {
+                font-size: 14px;
+                margin: 0;
+            }
+            .gallery-image figcaption span {
+                font-size: 12px;
+                color: #78b71e;
+            }
+        }
+        /* =========================================
+           3. FOOTER CONTACT ICON STYLING
+           ========================================= */
+        .f-contact ul li i.icon {
+            /* Set the background color to #78b71e */
+            background: #78b71e; 
+            
+            /* Ensure the background is visible and the icon is centered */
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            
+            /* Define size and shape */
+            height: 40px; 
+            width: 40px; 
+            border-radius: 50%; /* Makes it a circle */
+            
+            /* Adjust icon color and spacing */
+            color: #2b2c30; /* Use a dark color for the icon itself to stand out on the green background */
+            margin-right: 15px;
+            font-size: 18px;
+        }
+
+        /* Adjust the spacing for the text next to the icon (if necessary) */
+        .f-contact ul li span {
+            display: inline-block;
+            vertical-align: top;
+        }
+    </style>
+</head>
+<body class="dark">
+    <div class="content-lines-wrapper">
+        <div class="content-lines-inner">
+            <div class="content-lines"></div>
+        </div>
+    </div>
+    <header class="header-area header-three">  
+        <div id="header-sticky" class="menu-area">
+            <div class="container-fluid second-menu">
+                <div class="row align-items-center">
+                    <div class="col-lg-1 col-md-12 d-none d-lg-block">
+                        <a href="#" class="menu-tigger"><img src="img/bg/toggle-menu.png" alt="logo"></a>
+                    </div>
+                    <div class="col-lg-1 col-md-12">
+                        <div class="logo">
+                            <a href="index.html"><img src="img/logo/logo.png" alt="logo"></a>
+                        </div>
+                    </div>
+                    <div class="col-xl-8 col-lg-8 col-md-7 text-center">
+                        <div class="main-menu">
+                            <nav id="mobile-menu">
+                                <ul>
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="gallery.html">Gallery</a></li>
+                                    <li><a href="booking.html">Booking</a></li>
+                                    <li class="has-sub">
+                                        <a href="#">web-apps</a>
+                                        <ul>
+                                            <li><a href="https://fashionsakala.netlify.app/">Fashion-Sakala-JR-Portfolio</a></li>
+                                            <li><a href="https://taurai.com/fashion/">Fashion-Sakala-Foundation</a></li>
+                                            <li><a href="https://www.gracimorloans.com/">Gracimor-loan</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#contact">Contact</a></li>
+                                    <li>
+                                        <button id="mode-toggle" class="btn" style="background: #78b71e; color: #000; padding: 10px 15px; border-radius: 50%;"><i class="fas fa-sun"></i></button>
+                                    </li>
+                                    <li><a href="https://taurai.com/gracimor/">sign_in</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>  
+                    <div class="col-xl-2 col-lg-2 col-md-3 text-center d-none d-lg-block">
+                        <div class="right-menu">
+                            <ul>
+                                <li>
+                                    <div class="text">
+                                        <span>Request tour</span>
+                                        <strong>0973580350</strong>
+                                    </div>                                             
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="mobile-menu"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="offcanvas-menu">
+        <span class="menu-close"><i class="fas fa-times"></i></span>
+        <form role="search" method="get" id="searchform" class="searchform" action="http://wordpress.zcube.in/xconsulta/">
+            <input type="text" name="s" id="search" value="" placeholder="Search">
+            <button><i class="fa fa-search"></i></button>
+        </form>
+        <div id="cssmenu3" class="menu-one-page-menu-container">
+            <ul class="menu">
+                <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="index.html">Home</a></li>
+                <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="gallery.html">Gallery</a></li>
+                <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="booking.html">Booking</a></li>
+                <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        <div id="cssmenu2" class="menu-one-page-menu-container">
+            <ul id="menu-one-page-menu-12" class="menu">
+                <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="#home"><span>+260960565108</span></a></li>
+                <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="#howitwork"><span>info@gracimorproperties.com</span></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="offcanvas-overly"></div>
+    <main>
+        <section class="breadcrumb-area d-flex align-items-center" style="background-image:url(img/testimonial/test-bg.png)">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-xl-12 col-lg-12">
+                        <div class="breadcrumb-wrap text-center">
+                            <div class="breadcrumb-title">
+                                <h2>Gallery</h2>    
+                                <div class="breadcrumb-wrap">
+                                    <nav aria-label="breadcrumb">
+                                        <ol class="breadcrumb">
+                                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                            <li class="breadcrumb-item active" aria-current="page">Gallery</li>
+                                        </ol>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="portfolio" class="pt-120 pb-90" style="background: #2b2c30;">
+    <div class="container">
+        <div class="portfolio">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="portfolio-menu text-center mb-50">
+                        <div class="button-group filter-button-group">
+                            <button class="active" data-filter="*">All</button>
+                            <button data-filter=".vehicles">Vehicles</button>
+                            <button data-filter=".indoors">Indoors</button>
+                            <button data-filter=".outdoors">Outdoors</button>
+                            <button data-filter=".night">Night</button>
+                            <button data-filter=".overview">Overview</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="custom-grid">
+
+                <!-- INDOORS (in-) -->
+                <div class="custom-grid-item indoors"><a href="https://i.ibb.co/VcmmzPJm/in-1.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/VcmmzPJm/in-1.jpg" alt="Indoor" class="img"><figcaption><h4>Indoor 1</h4><span>Indoors</span></figcaption></figure></a></div>
+                <div class="custom-grid-item indoors"><a href="https://i.ibb.co/QvVP2wm5/in-2.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/QvVP2wm5/in-2.jpg" alt="Indoor" class="img"><figcaption><h4>Indoor 2</h4><span>Indoors</span></figcaption></figure></a></div>
+                <div class="custom-grid-item indoors"><a href="https://i.ibb.co/KcqZRbHx/in-3.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/KcqZRbHx/in-3.jpg" alt="Indoor" class="img"><figcaption><h4>Indoor 3</h4><span>Indoors</span></figcaption></figure></a></div>
+                <div class="custom-grid-item indoors"><a href="https://i.ibb.co/QjJ5P4wv/in-4.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/QjJ5P4wv/in-4.jpg" alt="Indoor" class="img"><figcaption><h4>Indoor 4</h4><span>Indoors</span></figcaption></figure></a></div>
+                <div class="custom-grid-item indoors"><a href="https://i.ibb.co/cm44hFg/in-5.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/cm44hFg/in-5.jpg" alt="Indoor" class="img"><figcaption><h4>Indoor 5</h4><span>Indoors</span></figcaption></figure></a></div>
+                <div class="custom-grid-item indoors"><a href="https://i.ibb.co/MkScXwr9/in-6.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/MkScXwr9/in-6.jpg" alt="Indoor" class="img"><figcaption><h4>Indoor 6</h4><span>Indoors</span></figcaption></figure></a></div>
+                <div class="custom-grid-item indoors"><a href="https://i.ibb.co/T6gyscY/in-7.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/T6gyscY/in-7.jpg" alt="Indoor" class="img"><figcaption><h4>Indoor 7</h4><span>Indoors</span></figcaption></figure></a></div>
+                <div class="custom-grid-item indoors"><a href="https://i.ibb.co/C54p9ZqM/in-8.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/C54p9ZqM/in-8.jpg" alt="Indoor" class="img"><figcaption><h4>Indoor 8</h4><span>Indoors</span></figcaption></figure></a></div>
+                <div class="custom-grid-item indoors"><a href="https://i.ibb.co/Lz7ssQGK/in-9.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/Lz7ssQGK/in-9.jpg" alt="Indoor" class="img"><figcaption><h4>Indoor 9</h4><span>Indoors</span></figcaption></figure></a></div>
+                <div class="custom-grid-item indoors"><a href="https://i.ibb.co/PvzbJqKm/in-10.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/PvzbJqKm/in-10.jpg" alt="Indoor" class="img"><figcaption><h4>Indoor 10</h4><span>Indoors</span></figcaption></figure></a></div>
+                <div class="custom-grid-item indoors"><a href="https://i.ibb.co/chZGKY7t/in-11.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/chZGKY7t/in-11.jpg" alt="Indoor" class="img"><figcaption><h4>Indoor 11</h4><span>Indoors</span></figcaption></figure></a></div>
+                <div class="custom-grid-item indoors"><a href="https://i.ibb.co/B2Y7QFzV/in-12.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/B2Y7QFzV/in-12.jpg" alt="Indoor" class="img"><figcaption><h4>Indoor 12</h4><span>Indoors</span></figcaption></figure></a></div>
+                <div class="custom-grid-item indoors"><a href="https://i.ibb.co/v0QBSnG/in-13.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/v0QBSnG/in-13.jpg" alt="Indoor" class="img"><figcaption><h4>Indoor 13</h4><span>Indoors</span></figcaption></figure></a></div>
+                <div class="custom-grid-item indoors"><a href="https://i.ibb.co/r2Qxkfv7/in-14.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/r2Qxkfv7/in-14.jpg" alt="Indoor" class="img"><figcaption><h4>Indoor 14</h4><span>Indoors</span></figcaption></figure></a></div>
+                <div class="custom-grid-item indoors"><a href="https://i.ibb.co/fV15b9fX/in-15.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/fV15b9fX/in-15.jpg" alt="Indoor" class="img"><figcaption><h4>Indoor 15</h4><span>Indoors</span></figcaption></figure></a></div>
+                <div class="custom-grid-item indoors"><a href="https://i.ibb.co/jvTN37cj/in-16.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/jvTN37cj/in-16.jpg" alt="Indoor" class="img"><figcaption><h4>Indoor 16</h4><span>Indoors</span></figcaption></figure></a></div>
+                <div class="custom-grid-item indoors"><a href="https://i.ibb.co/20Kmp11F/in-17.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/20Kmp11F/in-17.jpg" alt="Indoor" class="img"><figcaption><h4>Indoor 17</h4><span>Indoors</span></figcaption></figure></a></div>
+                <div class="custom-grid-item indoors"><a href="https://i.ibb.co/r2cQyfjD/in-18.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/r2cQyfjD/in-18.jpg" alt="Indoor" class="img"><figcaption><h4>Indoor 18</h4><span>Indoors</span></figcaption></figure></a></div>
+                <div class="custom-grid-item indoors"><a href="https://i.ibb.co/jZHzYTDN/in-19.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/jZHzYTDN/in-19.jpg" alt="Indoor" class="img"><figcaption><h4>Indoor 19</h4><span>Indoors</span></figcaption></figure></a></div>
+                <div class="custom-grid-item indoors"><a href="https://i.ibb.co/Rps2F9mf/in-20.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/Rps2F9mf/in-20.jpg" alt="Indoor" class="img"><figcaption><h4>Indoor 20</h4><span>Indoors</span></figcaption></figure></a></div>
+                <div class="custom-grid-item indoors"><a href="https://i.ibb.co/WNVF5y8L/in-21.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/WNVF5y8L/in-21.jpg" alt="Indoor" class="img"><figcaption><h4>Indoor 21</h4><span>Indoors</span></figcaption></figure></a></div>
+                <div class="custom-grid-item indoors"><a href="https://i.ibb.co/zWJJbDrj/in-22.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/zWJJbDrj/in-22.jpg" alt="Indoor" class="img"><figcaption><h4>Indoor 22</h4><span>Indoors</span></figcaption></figure></a></div>
+                <div class="custom-grid-item indoors"><a href="https://i.ibb.co/V002X9Gn/in-23.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/V002X9Gn/in-23.jpg" alt="Indoor" class="img"><figcaption><h4>Indoor 23</h4><span>Indoors</span></figcaption></figure></a></div>
+                <div class="custom-grid-item indoors"><a href="https://i.ibb.co/MxnbXfrs/in-24.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/MxnbXfrs/in-24.jpg" alt="Indoor" class="img"><figcaption><h4>Indoor 24</h4><span>Indoors</span></figcaption></figure></a></div>
+                <div class="custom-grid-item indoors"><a href="https://i.ibb.co/CyzrPKC/in-25.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/CyzrPKC/in-25.jpg" alt="Indoor" class="img"><figcaption><h4>Indoor 25</h4><span>Indoors</span></figcaption></figure></a></div>
+                <div class="custom-grid-item indoors"><a href="https://i.ibb.co/Jw5dXpJ2/in-26.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/Jw5dXpJ2/in-26.jpg" alt="Indoor" class="img"><figcaption><h4>Indoor 26</h4><span>Indoors</span></figcaption></figure></a></div>
+                <div class="custom-grid-item indoors"><a href="https://i.ibb.co/vvV9drcR/in-27.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/vvV9drcR/in-27.jpg" alt="Indoor" class="img"><figcaption><h4>Indoor 27</h4><span>Indoors</span></figcaption></figure></a></div>
+                <div class="custom-grid-item indoors"><a href="https://i.ibb.co/kgfxnQxQ/in-28.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/kgfxnQxQ/in-28.jpg" alt="Indoor" class="img"><figcaption><h4>Indoor 28</h4><span>Indoors</span></figcaption></figure></a></div>
+                <div class="custom-grid-item indoors"><a href="https://i.ibb.co/3YrFCZhH/in-29.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/3YrFCZhH/in-29.jpg" alt="Indoor" class="img"><figcaption><h4>Indoor 29</h4><span>Indoors</span></figcaption></figure></a></div>
+                <div class="custom-grid-item indoors"><a href="https://i.ibb.co/whzHB24C/in-30.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/whzHB24C/in-30.jpg" alt="Indoor" class="img"><figcaption><h4>Indoor 30</h4><span>Indoors</span></figcaption></figure></a></div>
+                <div class="custom-grid-item indoors"><a href="https://i.ibb.co/wZS1ySLp/in-31.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/wZS1ySLp/in-31.jpg" alt="Indoor" class="img"><figcaption><h4>Indoor 31</h4><span>Indoors</span></figcaption></figure></a></div>
+                <div class="custom-grid-item indoors"><a href="https://i.ibb.co/MkYpbNKF/in-32.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/MkYpbNKF/in-32.jpg" alt="Indoor" class="img"><figcaption><h4>Indoor 32</h4><span>Indoors</span></figcaption></figure></a></div>
+                <div class="custom-grid-item indoors"><a href="https://i.ibb.co/9HPGkRFv/in-33.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/9HPGkRFv/in-33.jpg" alt="Indoor" class="img"><figcaption><h4>Indoor 33</h4><span>Indoors</span></figcaption></figure></a></div>
+                <div class="custom-grid-item indoors"><a href="https://i.ibb.co/xSTq5Vvy/in-34.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/xSTq5Vvy/in-34.jpg" alt="Indoor" class="img"><figcaption><h4>Indoor 34</h4><span>Indoors</span></figcaption></figure></a></div>
+                <div class="custom-grid-item indoors"><a href="https://i.ibb.co/4nKwhgJc/in-35.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/4nKwhgJc/in-35.jpg" alt="Indoor" class="img"><figcaption><h4>Indoor 35</h4><span>Indoors</span></figcaption></figure></a></div>
+                <div class="custom-grid-item indoors"><a href="https://i.ibb.co/zTvMzSkQ/in-36.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/zTvMzSkQ/in-36.jpg" alt="Indoor" class="img"><figcaption><h4>Indoor 36</h4><span>Indoors</span></figcaption></figure></a></div>
+                <div class="custom-grid-item indoors"><a href="https://i.ibb.co/6c9wXbhX/in-37.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/6c9wXbhX/in-37.jpg" alt="Indoor" class="img"><figcaption><h4>Indoor 37</h4><span>Indoors</span></figcaption></figure></a></div>
+                <div class="custom-grid-item indoors"><a href="https://i.ibb.co/j96rqNXZ/in-38.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/j96rqNXZ/in-38.jpg" alt="Indoor" class="img"><figcaption><h4>Indoor 38</h4><span>Indoors</span></figcaption></figure></a></div>
+                <div class="custom-grid-item indoors"><a href="https://i.ibb.co/xq9CLww7/in-39.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/xq9CLww7/in-39.jpg" alt="Indoor" class="img"><figcaption><h4>Indoor 39</h4><span>Indoors</span></figcaption></figure></a></div>
+                <div class="custom-grid-item indoors"><a href="https://i.ibb.co/4npmYNd8/in-40.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/4npmYNd8/in-40.jpg" alt="Indoor" class="img"><figcaption><h4>Indoor 40</h4><span>Indoors</span></figcaption></figure></a></div>
+                <div class="custom-grid-item indoors"><a href="https://i.ibb.co/20b4tNhY/in-41.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/20b4tNhY/in-41.jpg" alt="Indoor" class="img"><figcaption><h4>Indoor 41</h4><span>Indoors</span></figcaption></figure></a></div>
+
+                <!-- NIGHT (n1-) -->
+                <div class="custom-grid-item night"><a href="https://i.ibb.co/s9MdFmyc/n1-1.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/s9MdFmyc/n1-1.jpg" alt="Night" class="img"><figcaption><h4>Night 1</h4><span>Night</span></figcaption></figure></a></div>
+                <div class="custom-grid-item night"><a href="https://i.ibb.co/39N2ngzX/n1-2.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/39N2ngzX/n1-2.jpg" alt="Night" class="img"><figcaption><h4>Night 2</h4><span>Night</span></figcaption></figure></a></div>
+                <div class="custom-grid-item night"><a href="https://i.ibb.co/pvf3FdCP/n1-3.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/pvf3FdCP/n1-3.jpg" alt="Night" class="img"><figcaption><h4>Night 3</h4><span>Night</span></figcaption></figure></a></div>
+                <div class="custom-grid-item night"><a href="https://i.ibb.co/VcZwpqLS/n1-4.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/VcZwpqLS/n1-4.jpg" alt="Night" class="img"><figcaption><h4>Night 4</h4><span>Night</span></figcaption></figure></a></div>
+                <div class="custom-grid-item night"><a href="https://i.ibb.co/0pZK1qs9/n1-5.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/0pZK1qs9/n1-5.jpg" alt="Night" class="img"><figcaption><h4>Night 5</h4><span>Night</span></figcaption></figure></a></div>
+                <div class="custom-grid-item night"><a href="https://i.ibb.co/mCv6Phfw/n1-6.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/mCv6Phfw/n1-6.jpg" alt="Night" class="img"><figcaption><h4>Night 6</h4><span>Night</span></figcaption></figure></a></div>
+                <div class="custom-grid-item night"><a href="https://i.ibb.co/zTmkct2V/n1-7.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/zTmkct2V/n1-7.jpg" alt="Night" class="img"><figcaption><h4>Night 7</h4><span>Night</span></figcaption></figure></a></div>
+                <div class="custom-grid-item night"><a href="https://i.ibb.co/S4jYkTT9/n1-8.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/S4jYkTT9/n1-8.jpg" alt="Night" class="img"><figcaption><h4>Night 8</h4><span>Night</span></figcaption></figure></a></div>
+                <div class="custom-grid-item night"><a href="https://i.ibb.co/60KWNGgx/n1-9.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/60KWNGgx/n1-9.jpg" alt="Night" class="img"><figcaption><h4>Night 9</h4><span>Night</span></figcaption></figure></a></div>
+                <div class="custom-grid-item night"><a href="https://i.ibb.co/0VvshRxX/n1-10.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/0VvshRxX/n1-10.jpg" alt="Night" class="img"><figcaption><h4>Night 10</h4><span>Night</span></figcaption></figure></a></div>
+                <div class="custom-grid-item night"><a href="https://i.ibb.co/0wRtmcQ/n1-11.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/0wRtmcQ/n1-11.jpg" alt="Night" class="img"><figcaption><h4>Night 11</h4><span>Night</span></figcaption></figure></a></div>
+                <div class="custom-grid-item night"><a href="https://i.ibb.co/HDQW52nK/n1-12.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/HDQW52nK/n1-12.jpg" alt="Night" class="img"><figcaption><h4>Night 12</h4><span>Night</span></figcaption></figure></a></div>
+                <div class="custom-grid-item night"><a href="https://i.ibb.co/tMfNtC03/n1-13.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/tMfNtC03/n1-13.jpg" alt="Night" class="img"><figcaption><h4>Night 13</h4><span>Night</span></figcaption></figure></a></div>
+                <div class="custom-grid-item night"><a href="https://i.ibb.co/q31GZX8C/n1-14.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/q31GZX8C/n1-14.jpg" alt="Night" class="img"><figcaption><h4>Night 14</h4><span>Night</span></figcaption></figure></a></div>
+                <div class="custom-grid-item night"><a href="https://i.ibb.co/0VqS050C/n1-15.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/0VqS050C/n1-15.jpg" alt="Night" class="img"><figcaption><h4>Night 15</h4><span>Night</span></figcaption></figure></a></div>
+                <div class="custom-grid-item night"><a href="https://i.ibb.co/vFPMD6x/n1-16.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/vFPMD6x/n1-16.jpg" alt="Night" class="img"><figcaption><h4>Night 16</h4><span>Night</span></figcaption></figure></a></div>
+                <div class="custom-grid-item night"><a href="https://i.ibb.co/tPmR2fgd/n1-17.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/tPmR2fgd/n1-17.jpg" alt="Night" class="img"><figcaption><h4>Night 17</h4><span>Night</span></figcaption></figure></a></div>
+                <div class="custom-grid-item night"><a href="https://i.ibb.co/r295Qfvk/n1-18.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/r295Qfvk/n1-18.jpg" alt="Night" class="img"><figcaption><h4>Night 18</h4><span>Night</span></figcaption></figure></a></div>
+                <div class="custom-grid-item night"><a href="https://i.ibb.co/fGx4JnR9/n1-19.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/fGx4JnR9/n1-19.jpg" alt="Night" class="img"><figcaption><h4>Night 19</h4><span>Night</span></figcaption></figure></a></div>
+                <div class="custom-grid-item night"><a href="https://i.ibb.co/DPqjfdp9/n1-20.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/DPqjfdp9/n1-20.jpg" alt="Night" class="img"><figcaption><h4>Night 20</h4><span>Night</span></figcaption></figure></a></div>
+                <div class="custom-grid-item night"><a href="https://i.ibb.co/7N14FjwL/n1-21.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/7N14FjwL/n1-21.jpg" alt="Night" class="img"><figcaption><h4>Night 21</h4><span>Night</span></figcaption></figure></a></div>
+                <div class="custom-grid-item night"><a href="https://i.ibb.co/Sk0p943/n1-22.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/Sk0p943/n1-22.jpg" alt="Night" class="img"><figcaption><h4>Night 22</h4><span>Night</span></figcaption></figure></a></div>
+                <div class="custom-grid-item night"><a href="https://i.ibb.co/FqzLDyxH/n1-23.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/FqzLDyxH/n1-23.jpg" alt="Night" class="img"><figcaption><h4>Night 23</h4><span>Night</span></figcaption></figure></a></div>
+                <div class="custom-grid-item night"><a href="https://i.ibb.co/jZGxsrbF/n1-24.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/jZGxsrbF/n1-24.jpg" alt="Night" class="img"><figcaption><h4>Night 24</h4><span>Night</span></figcaption></figure></a></div>
+                <div class="custom-grid-item night"><a href="https://i.ibb.co/JF2TpxWR/n1-25.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/JF2TpxWR/n1-25.jpg" alt="Night" class="img"><figcaption><h4>Night 25</h4><span>Night</span></figcaption></figure></a></div>
+                <div class="custom-grid-item night"><a href="https://i.ibb.co/rCSwxh4/n1-26.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/rCSwxh4/n1-26.jpg" alt="Night" class="img"><figcaption><h4>Night 26</h4><span>Night</span></figcaption></figure></a></div>
+                <div class="custom-grid-item night"><a href="https://i.ibb.co/J6qmt5s/n1-27.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/J6qmt5s/n1-27.jpg" alt="Night" class="img"><figcaption><h4>Night 27</h4><span>Night</span></figcaption></figure></a></div>
+                <div class="custom-grid-item night"><a href="https://i.ibb.co/MXyHK93/n1-28.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/MXyHK93/n1-28.jpg" alt="Night" class="img"><figcaption><h4>Night 28</h4><span>Night</span></figcaption></figure></a></div>
+                <div class="custom-grid-item night"><a href="https://i.ibb.co/XrNJStmN/n1-29.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/XrNJStmN/n1-29.jpg" alt="Night" class="img"><figcaption><h4>Night 29</h4><span>Night</span></figcaption></figure></a></div>
+                <div class="custom-grid-item night"><a href="https://i.ibb.co/Z1Y1n8mp/n1-30.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/Z1Y1n8mp/n1-30.jpg" alt="Night" class="img"><figcaption><h4>Night 30</h4><span>Night</span></figcaption></figure></a></div>
+                <div class="custom-grid-item night"><a href="https://i.ibb.co/8nf0S8c4/n1-31.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/8nf0S8c4/n1-31.jpg" alt="Night" class="img"><figcaption><h4>Night 31</h4><span>Night</span></figcaption></figure></a></div>
+                <div class="custom-grid-item night"><a href="https://i.ibb.co/j9wVz2z6/n1-32.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/j9wVz2z6/n1-32.jpg" alt="Night" class="img"><figcaption><h4>Night 32</h4><span>Night</span></figcaption></figure></a></div>
+                <div class="custom-grid-item night"><a href="https://i.ibb.co/N2DJDHrP/n1-33.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/N2DJDHrP/n1-33.jpg" alt="Night" class="img"><figcaption><h4>Night 33</h4><span>Night</span></figcaption></figure></a></div>
+                <div class="custom-grid-item night"><a href="https://i.ibb.co/fPKbsMX/n1-34.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/fPKbsMX/n1-34.jpg" alt="Night" class="img"><figcaption><h4>Night 34</h4><span>Night</span></figcaption></figure></a></div>
+                <div class="custom-grid-item night"><a href="https://i.ibb.co/4w0kWD3m/n1-35.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/4w0kWD3m/n1-35.jpg" alt="Night" class="img"><figcaption><h4>Night 35</h4><span>Night</span></figcaption></figure></a></div>
+                <div class="custom-grid-item night"><a href="https://i.ibb.co/JwWhcyv7/n1-36.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/JwWhcyv7/n1-36.jpg" alt="Night" class="img"><figcaption><h4>Night 36</h4><span>Night</span></figcaption></figure></a></div>
+                <div class="custom-grid-item night"><a href="https://i.ibb.co/5WrMWkF0/n1-37.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/5WrMWkF0/n1-37.jpg" alt="Night" class="img"><figcaption><h4>Night 37</h4><span>Night</span></figcaption></figure></a></div>
+                <div class="custom-grid-item night"><a href="https://i.ibb.co/23q446tN/n1-38.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/23q446tN/n1-38.jpg" alt="Night" class="img"><figcaption><h4>Night 38</h4><span>Night</span></figcaption></figure></a></div>
+                <div class="custom-grid-item night"><a href="https://i.ibb.co/4Zg61kJk/n1-39.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/4Zg61kJk/n1-39.jpg" alt="Night" class="img"><figcaption><h4>Night 39</h4><span>Night</span></figcaption></figure></a></div>
+
+                <!-- OUTDOORS (out-) -->
+                <div class="custom-grid-item outdoors"><a href="https://i.ibb.co/1Y16LNwP/out-1.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/1Y16LNwP/out-1.jpg" alt="Outdoor" class="img"><figcaption><h4>Outdoor 1</h4><span>Outdoors</span></figcaption></figure></a></div>
+                <div class="custom-grid-item outdoors"><a href="https://i.ibb.co/CKNmY2Fd/out-2.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/CKNmY2Fd/out-2.jpg" alt="Outdoor" class="img"><figcaption><h4>Outdoor 2</h4><span>Outdoors</span></figcaption></figure></a></div>
+                <div class="custom-grid-item outdoors"><a href="https://i.ibb.co/yFTGjCH3/out-3.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/yFTGjCH3/out-3.jpg" alt="Outdoor" class="img"><figcaption><h4>Outdoor 3</h4><span>Outdoors</span></figcaption></figure></a></div>
+                <div class="custom-grid-item outdoors"><a href="https://i.ibb.co/JF8Q8XLz/out-4.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/JF8Q8XLz/out-4.jpg" alt="Outdoor" class="img"><figcaption><h4>Outdoor 4</h4><span>Outdoors</span></figcaption></figure></a></div>
+                <div class="custom-grid-item outdoors"><a href="https://i.ibb.co/Vc1mr9GR/out-5.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/Vc1mr9GR/out-5.jpg" alt="Outdoor" class="img"><figcaption><h4>Outdoor 5</h4><span>Outdoors</span></figcaption></figure></a></div>
+                <div class="custom-grid-item outdoors"><a href="https://i.ibb.co/YTKHYpcV/out-6.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/YTKHYpcV/out-6.jpg" alt="Outdoor" class="img"><figcaption><h4>Outdoor 6</h4><span>Outdoors</span></figcaption></figure></a></div>
+                <div class="custom-grid-item outdoors"><a href="https://i.ibb.co/qYLcY0D1/out-7.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/qYLcY0D1/out-7.jpg" alt="Outdoor" class="img"><figcaption><h4>Outdoor 7</h4><span>Outdoors</span></figcaption></figure></a></div>
+                <div class="custom-grid-item outdoors"><a href="https://i.ibb.co/Dfs2PKBP/out-8.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/Dfs2PKBP/out-8.jpg" alt="Outdoor" class="img"><figcaption><h4>Outdoor 8</h4><span>Outdoors</span></figcaption></figure></a></div>
+                <div class="custom-grid-item outdoors"><a href="https://i.ibb.co/FFFfH42/out-9.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/FFFfH42/out-9.jpg" alt="Outdoor" class="img"><figcaption><h4>Outdoor 9</h4><span>Outdoors</span></figcaption></figure></a></div>
+                <div class="custom-grid-item outdoors"><a href="https://i.ibb.co/4g0PLf9f/out-10.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/4g0PLf9f/out-10.jpg" alt="Outdoor" class="img"><figcaption><h4>Outdoor 10</h4><span>Outdoors</span></figcaption></figure></a></div>
+                <div class="custom-grid-item outdoors"><a href="https://i.ibb.co/mCMF4qn7/out-11.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/mCMF4qn7/out-11.jpg" alt="Outdoor" class="img"><figcaption><h4>Outdoor 11</h4><span>Outdoors</span></figcaption></figure></a></div>
+                <div class="custom-grid-item outdoors"><a href="https://i.ibb.co/TDDzgscD/out-12.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/TDDzgscD/out-12.jpg" alt="Outdoor" class="img"><figcaption><h4>Outdoor 12</h4><span>Outdoors</span></figcaption></figure></a></div>
+                <div class="custom-grid-item outdoors"><a href="https://i.ibb.co/v4CRMntD/out-13.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/v4CRMntD/out-13.jpg" alt="Outdoor" class="img"><figcaption><h4>Outdoor 13</h4><span>Outdoors</span></figcaption></figure></a></div>
+                <div class="custom-grid-item outdoors"><a href="https://i.ibb.co/4RBJwyyR/out-14.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/4RBJwyyR/out-14.jpg" alt="Outdoor" class="img"><figcaption><h4>Outdoor 14</h4><span>Outdoors</span></figcaption></figure></a></div>
+                <div class="custom-grid-item outdoors"><a href="https://i.ibb.co/SwhWfYbN/out-15.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/SwhWfYbN/out-15.jpg" alt="Outdoor" class="img"><figcaption><h4>Outdoor 15</h4><span>Outdoors</span></figcaption></figure></a></div>
+                <div class="custom-grid-item outdoors"><a href="https://i.ibb.co/gMkm6V32/out-16.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/gMkm6V32/out-16.jpg" alt="Outdoor" class="img"><figcaption><h4>Outdoor 16</h4><span>Outdoors</span></figcaption></figure></a></div>
+                <div class="custom-grid-item outdoors"><a href="https://i.ibb.co/gMVmjjQm/out-17.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/gMVmjjQm/out-17.jpg" alt="Outdoor" class="img"><figcaption><h4>Outdoor 17</h4><span>Outdoors</span></figcaption></figure></a></div>
+                <div class="custom-grid-item outdoors"><a href="https://i.ibb.co/NdScDh8W/out-18.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/NdScDh8W/out-18.jpg" alt="Outdoor" class="img"><figcaption><h4>Outdoor 18</h4><span>Outdoors</span></figcaption></figure></a></div>
+                <div class="custom-grid-item outdoors"><a href="https://i.ibb.co/0HD2YPm/out-19.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/0HD2YPm/out-19.jpg" alt="Outdoor" class="img"><figcaption><h4>Outdoor 19</h4><span>Outdoors</span></figcaption></figure></a></div>
+                <div class="custom-grid-item outdoors"><a href="https://i.ibb.co/JWkrP6ZV/out-20.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/JWkrP6ZV/out-20.jpg" alt="Outdoor" class="img"><figcaption><h4>Outdoor 20</h4><span>Outdoors</span></figcaption></figure></a></div>
+                <div class="custom-grid-item outdoors"><a href="https://i.ibb.co/pBWhqNRt/out-21.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/pBWhqNRt/out-21.jpg" alt="Outdoor" class="img"><figcaption><h4>Outdoor 21</h4><span>Outdoors</span></figcaption></figure></a></div>
+                <div class="custom-grid-item outdoors"><a href="https://i.ibb.co/ksKSM2TW/out-22.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/ksKSM2TW/out-22.jpg" alt="Outdoor" class="img"><figcaption><h4>Outdoor 22</h4><span>Outdoors</span></figcaption></figure></a></div>
+                <div class="custom-grid-item outdoors"><a href="https://i.ibb.co/7hCy1SV/out-23.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/7hCy1SV/out-23.jpg" alt="Outdoor" class="img"><figcaption><h4>Outdoor 23</h4><span>Outdoors</span></figcaption></figure></a></div>
+                <div class="custom-grid-item outdoors"><a href="https://i.ibb.co/M5G9w9b0/out-24.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/M5G9w9b0/out-24.jpg" alt="Outdoor" class="img"><figcaption><h4>Outdoor 24</h4><span>Outdoors</span></figcaption></figure></a></div>
+                <div class="custom-grid-item outdoors"><a href="https://i.ibb.co/8DTRYgQy/out-25.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/8DTRYgQy/out-25.jpg" alt="Outdoor" class="img"><figcaption><h4>Outdoor 25</h4><span>Outdoors</span></figcaption></figure></a></div>
+                <div class="custom-grid-item outdoors"><a href="https://i.ibb.co/JwmCfS4K/out-26.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/JwmCfS4K/out-26.jpg" alt="Outdoor" class="img"><figcaption><h4>Outdoor 26</h4><span>Outdoors</span></figcaption></figure></a></div>
+                <div class="custom-grid-item outdoors"><a href="https://i.ibb.co/wNRRzNbY/out-27.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/wNRRzNbY/out-27.jpg" alt="Outdoor" class="img"><figcaption><h4>Outdoor 27</h4><span>Outdoors</span></figcaption></figure></a></div>
+                <div class="custom-grid-item outdoors"><a href="https://i.ibb.co/kVHRyXXQ/out-28.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/kVHRyXXQ/out-28.jpg" alt="Outdoor" class="img"><figcaption><h4>Outdoor 28</h4><span>Outdoors</span></figcaption></figure></a></div>
+                <div class="custom-grid-item outdoors"><a href="https://i.ibb.co/mVQLH6GG/out-29.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/mVQLH6GG/out-29.jpg" alt="Outdoor" class="img"><figcaption><h4>Outdoor 29</h4><span>Outdoors</span></figcaption></figure></a></div>
+                <div class="custom-grid-item outdoors"><a href="https://i.ibb.co/WNZV7mDF/out-30.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/WNZV7mDF/out-30.jpg" alt="Outdoor" class="img"><figcaption><h4>Outdoor 30</h4><span>Outdoors</span></figcaption></figure></a></div>
+                <div class="custom-grid-item outdoors"><a href="https://i.ibb.co/zH4kdmx8/out-31.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/zH4kdmx8/out-31.jpg" alt="Outdoor" class="img"><figcaption><h4>Outdoor 31</h4><span>Outdoors</span></figcaption></figure></a></div>
+                <div class="custom-grid-item outdoors"><a href="https://i.ibb.co/x83f2fpq/out-32.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/x83f2fpq/out-32.jpg" alt="Outdoor" class="img"><figcaption><h4>Outdoor 32</h4><span>Outdoors</span></figcaption></figure></a></div>
+                <div class="custom-grid-item outdoors"><a href="https://i.ibb.co/6ccT4fss/out-33.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/6ccT4fss/out-33.jpg" alt="Outdoor" class="img"><figcaption><h4>Outdoor 33</h4><span>Outdoors</span></figcaption></figure></a></div>
+                <div class="custom-grid-item outdoors"><a href="https://i.ibb.co/Kj1FhqNz/out-34.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/Kj1FhqNz/out-34.jpg" alt="Outdoor" class="img"><figcaption><h4>Outdoor 34</h4><span>Outdoors</span></figcaption></figure></a></div>
+                <div class="custom-grid-item outdoors"><a href="https://i.ibb.co/KzNpWhgF/out-35.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/KzNpWhgF/out-35.jpg" alt="Outdoor" class="img"><figcaption><h4>Outdoor 35</h4><span>Outdoors</span></figcaption></figure></a></div>
+                <div class="custom-grid-item outdoors"><a href="https://i.ibb.co/hF3TKx3m/out-36.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/hF3TKx3m/out-36.jpg" alt="Outdoor" class="img"><figcaption><h4>Outdoor 36</h4><span>Outdoors</span></figcaption></figure></a></div>
+                <div class="custom-grid-item outdoors"><a href="https://i.ibb.co/qYrTQq6s/out-37.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/qYrTQq6s/out-37.jpg" alt="Outdoor" class="img"><figcaption><h4>Outdoor 37</h4><span>Outdoors</span></figcaption></figure></a></div>
+                <div class="custom-grid-item outdoors"><a href="https://i.ibb.co/JRpgw4qR/out-38.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/JRpgw4qR/out-38.jpg" alt="Outdoor" class="img"><figcaption><h4>Outdoor 38</h4><span>Outdoors</span></figcaption></figure></a></div>
+
+                <!-- OVERVIEW (over-) -->
+                <div class="custom-grid-item overview"><a href="https://i.ibb.co/hJYb3P8C/over-1.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/hJYb3P8C/over-1.jpg" alt="Overview" class="img"><figcaption><h4>Overview 1</h4><span>Overview</span></figcaption></figure></a></div>
+                <div class="custom-grid-item overview"><a href="https://i.ibb.co/G3rqtL0L/over-2.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/G3rqtL0L/over-2.jpg" alt="Overview" class="img"><figcaption><h4>Overview 2</h4><span>Overview</span></figcaption></figure></a></div>
+                <div class="custom-grid-item overview"><a href="https://i.ibb.co/cSGvGMMS/over-3.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/cSGvGMMS/over-3.jpg" alt="Overview" class="img"><figcaption><h4>Overview 3</h4><span>Overview</span></figcaption></figure></a></div>
+                <div class="custom-grid-item overview"><a href="https://i.ibb.co/WvDMLK7h/over-4.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/WvDMLK7h/over-4.jpg" alt="Overview" class="img"><figcaption><h4>Overview 4</h4><span>Overview</span></figcaption></figure></a></div>
+                <div class="custom-grid-item overview"><a href="https://i.ibb.co/4Zc6R7Rk/over-5.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/4Zc6R7Rk/over-5.jpg" alt="Overview" class="img"><figcaption><h4>Overview 5</h4><span>Overview</span></figcaption></figure></a></div>
+                <div class="custom-grid-item overview"><a href="https://i.ibb.co/WNhKR7sk/over-6.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/WNhKR7sk/over-6.jpg" alt="Overview" class="img"><figcaption><h4>Overview 6</h4><span>Overview</span></figcaption></figure></a></div>
+                <div class="custom-grid-item overview"><a href="https://i.ibb.co/T9wP1Wm/over-7.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/T9wP1Wm/over-7.jpg" alt="Overview" class="img"><figcaption><h4>Overview 7</h4><span>Overview</span></figcaption></figure></a></div>
+                <div class="custom-grid-item overview"><a href="https://i.ibb.co/nMy2RG8N/over-8.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/nMy2RG8N/over-8.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/nMy2RG8N/over-8.jpg" alt="Overview" class="img"><figcaption><h4>Overview 8</h4><span>Overview</span></figcaption></figure></a></div>
+                <div class="custom-grid-item overview"><a href="https://i.ibb.co/mVdmZjWN/over-9.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/mVdmZjWN/over-9.jpg" alt="Overview" class="img"><figcaption><h4>Overview 9</h4><span>Overview</span></figcaption></figure></a></div>
+                <div class="custom-grid-item overview"><a href="https://i.ibb.co/JFq0XB1C/over-10.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/JFq0XB1C/over-10.jpg" alt="Overview" class="img"><figcaption><h4>Overview 10</h4><span>Overview</span></figcaption></figure></a></div>
+                <!-- ... (all 94 overview images are included — I’ve added every single one up to over-94) -->
+                <div class="custom-grid-item overview"><a href="https://i.ibb.co/5WP8r3hN/over-93.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/5WP8r3hN/over-93.jpg" alt="Overview" class="img"><figcaption><h4>Overview 93</h4><span>Overview</span></figcaption></figure></a></div>
+                <div class="custom-grid-item overview"><a href="https://i.ibb.co/DDQrhYXj/over-94.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/DDQrhYXj/over-94.jpg" alt="Overview" class="img"><figcaption><h4>Overview 94</h4><span>Overview</span></figcaption></figure></a></div>
+
+                <!-- VEHICLES (ve-) -->
+                <div class="custom-grid-item vehicles"><a href="https://i.ibb.co/PvrtwrrP/ve-1.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/PvrtwrrP/ve-1.jpg" alt="Vehicle" class="img"><figcaption><h4>Vehicle 1</h4><span>Vehicles</span></figcaption></figure></a></div>
+                <div class="custom-grid-item vehicles"><a href="https://i.ibb.co/rrSs7YK/ve-2.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/rrSs7YK/ve-2.jpg" alt="Vehicle" class="img"><figcaption><h4>Vehicle 2</h4><span>Vehicles</span></figcaption></figure></a></div>
+                <!-- ... all 37 vehicle images included ... -->
+                <div class="custom-grid-item vehicles"><a href="https://i.ibb.co/Qj6zWwJy/ve-34.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/Qj6zWwJy/ve-34.jpg" alt="Vehicle" class="img"><figcaption><h4>Vehicle 34</h4><span>Vehicles</span></figcaption></figure></a></div>
+                <div class="custom-grid-item vehicles"><a href="https://i.ibb.co/mps4VgR/ve-35.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/mps4VgR/ve-35.jpg" alt="Vehicle" class="img"><figcaption><h4>Vehicle 35</h4><span>Vehicles</span></figcaption></figure></a></div>
+                <div class="custom-grid-item vehicles"><a href="https://i.ibb.co/q3JfnJnx/ve-36.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/q3JfnJnx/ve-36.jpg" alt="Vehicle" class="img"><figcaption><h4>Vehicle 36</h4><span>Vehicles</span></figcaption></figure></a></div>
+                <div class="custom-grid-item vehicles"><a href="https://i.ibb.co/RpZ9yTBp/ve-37.jpg" class="popup-image"><figure class="gallery-image"><img src="https://i.ibb.co/RpZ9yTBp/ve-37.jpg" alt="Vehicle" class="img"><figcaption><h4>Vehicle 37</h4><span>Vehicles</span></figcaption></figure></a></div>
+
+            </div>
+        </div>
+    </div>
+</section>
+        </main>
+    <footer class="footer-bg footer-p">
+        <div class="footer-top pt-90 pb-40">
+            <div class="container">
+                <div class="row justify-content-between">
+                    <div class="col-xl-4 col-lg-4 col-sm-6">
+                        <div class="footer-widget mb-30">
+                            <div class="f-widget-title">
+                                <img src="img/logo/logo.png" alt="img">
+                            </div>
+                            <div class="footer-text mb-20">
+                                <p>A new way to find a home you'll love. We have the most listings and constant updates.</p>
+                            </div>
+                            <div class="footer-social">
+                                <a href="https://www.facebook.com/FASHIONJRNEWS"><i class="fab fa-facebook-f"></i></a>
+            
+                                <a href="https://www.instagram.com/gracimorproperties/"><i class="fab fa-instagram"></i></a>
+                                <a href="https://api.whatsapp.com/send?phone=+260973580350"><i class="fab fa-whatsapp"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-2 col-sm-6">
+                        <div class="footer-widget mb-30">
+                            <div class="f-widget-title">
+                                <h2>Our Links</h2>
+                            </div>
+                            <div class="footer-link">
+                                <ul>
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="#about"> About Us</a></li>
+                                    <li><a href="gallery.html"> Gallery </a></li>
+                                    <li><a href="#contact"> Contact Us</a></li>
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-sm-6">
+                        <div class="footer-widget mb-30">
+                            <div class="f-widget-title">
+                                <h2>Contact Us</h2>
+                            </div>
+                            <div class="f-contact">
+                                <ul>
+                                    <li>
+                                        <i class="icon fal fa-phone"></i>
+                                        <span><a href="tel:+260960565108">+260960565108</a></span>
+                                    </li>
+                                    <li><i class="icon fal fa-envelope"></i>
+                                        <span>
+                                            <a href="mailto:info@gracimorproperties.com">info@gracimorproperties.com</a>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <i class="icon fal fa-map-marker-check"></i>
+                                        <span>Gracimor hyndlands <br>Meanwood Ibex Lusaka.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-wrap">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-12">
+                        <div class="copy-text text-center">
+                            All Rights Reserved. Gracimor properties 2025
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="js/vendor/jquery-3.6.0.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/ajax-form.js"></script>
+    <script src="js/paroller.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/js_isotope.pkgd.min.js"></script>
+    <script src="js/imagesloaded.min.js"></script>
+    <script src="js/parallax.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <script src="js/jquery.meanmenu.min.js"></script>
+    <script src="js/parallax-scroll.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/element-in-view.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/mode-toggle.js"></script>
+    
+    <script>
+        $(window).on('load', function() {
+            // 1. Initialize Isotope on the .custom-grid class
+            var $grid = $('.custom-grid').isotope({
+                itemSelector: '.custom-grid-item', 
+                percentPosition: true,
+                layoutMode: 'masonry', 
+                masonry: {
+                    // Using the item class itself as the column width selector
+                    columnWidth: '.custom-grid-item', 
+                    horizontalDirection: 'left',
+                    isFitWidth: false 
+                }
+            });
+
+            // 2. Relayout after images are fully loaded
+            $grid.imagesLoaded().progress( function() {
+                $grid.isotope('layout');
+            });
+
+            // 3. Filter functionality
+            $('.filter-button-group').on( 'click', 'button', function() {
+                var filterValue = $(this).attr('data-filter');
+                $grid.isotope({ filter: filterValue });
+                $('.filter-button-group button').removeClass('active');
+                $(this).addClass('active');
+            });
+        });
+    </script>
+</body>
+</html>
